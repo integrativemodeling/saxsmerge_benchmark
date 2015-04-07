@@ -1,0 +1,6 @@
+title: SAXSMerge benchmark
+tags: [SAXS, benchmark]
+pmid: 24365937
+test:
+    runtime: 24h
+    build: release
