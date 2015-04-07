@@ -35,6 +35,10 @@ class SAXSApplicationTest(IMP.test.ApplicationTestCase):
             self.crysol = True
         else:
             self.crysol = False
+        if self.which('saxs_merge'):
+            self.appbin = 'saxs_merge'
+        else:
+            self.appbin = 'saxs_merge.py'
 
     def which(self, program):
         """which mimic adapted from
@@ -62,7 +66,7 @@ class SAXSApplicationTest(IMP.test.ApplicationTestCase):
         print "### run_app"
         print ' '.join(args)
         # sys.exit()
-        p = self.run_python_application('saxs_merge.py', args)
+        p = self.run_python_application(self.appbin, args)
         out, err = p.communicate()
         sys.stderr.write(err)
         self.assertApplicationExitedCleanly(p.returncode, err)
@@ -674,7 +678,7 @@ class SAXSApplicationTest(IMP.test.ApplicationTestCase):
             print "### run_results"
             print ' '.join(args)
             # sys.exit()
-            p = self.run_python_application('saxs_merge.py', args)
+            p = self.run_python_application(self.appbin, args)
             out, err = p.communicate()
             sys.stderr.write(err)
             self.assertApplicationExitedCleanly(p.returncode, err)
