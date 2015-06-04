@@ -670,7 +670,7 @@ class SAXSApplicationTest(IMP.test.ApplicationTestCase):
                     '--cmodel=normal',
                     '--bmean=Full',
                     '--stop=rescaling', '--postpone_cleanup',
-                    #'--npoints=-1',
+                    '--npoints=-1',
                     '--allfiles', '--outlevel=full',
                     'runapp_' + name + '/data_merged.dat', manual_merge]
             if extra_args:
@@ -1024,7 +1024,6 @@ for k, param in enumerate(params):
                                   dset.mergename, dset.pdb, plot_data=True)
         test_method.__name__ = 'test_case_%d_%d' % (l, k)
         setattr(SAXSApplicationTest, test_method.__name__, test_method)
-
 
 def print_corresp():
     print "Datasets"
