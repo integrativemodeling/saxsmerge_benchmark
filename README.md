@@ -9,7 +9,8 @@ profile is computed using FoXS and crysol. Comparisons are then also made using
 these profiles.
 
 
-The benchmark takes about 1h to run and will produce two types of folders per
+The benchmark takes about 1h to run. Check `example_output` for an example of
+the output of the benchmark. It will produce two types of folders per
 run:
  - a `runapp_*` folder, in which the merging of the inputs took place
  - a `compapp_*` folder, in which manual and automatic merges are compared
