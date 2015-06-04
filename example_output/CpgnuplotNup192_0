@@ -1,0 +1,24 @@
+set term png 
+set output "Nup192_0_inputs_log_overlaid.png"
+set xrange [0:0.3540834]
+set log y
+p "runapp_Nup192_0/data_Nup192_01B_S014_0_01.sub" u 1:($4==1?$2:1/0):3 w yerr t "Nup192_01B_S014_0_01.sub", \
+   "runapp_Nup192_0/mean_Nup192_01B_S014_0_01.sub" u 1:2 w l lt 2 not, \
+   "runapp_Nup192_0/mean_Nup192_01B_S014_0_01.sub" u 1:($2+$3) w l lt 2 not, \
+   "runapp_Nup192_0/mean_Nup192_01B_S014_0_01.sub" u 1:($2-$3) w l lt 2 not, \
+"runapp_Nup192_0/data_Nup192_01C_S016_0_01.sub" u 1:($4==1?$2:1/0):3 w yerr t "Nup192_01C_S016_0_01.sub", \
+   "runapp_Nup192_0/mean_Nup192_01C_S016_0_01.sub" u 1:2 w l lt 3 not, \
+   "runapp_Nup192_0/mean_Nup192_01C_S016_0_01.sub" u 1:($2+$3) w l lt 3 not, \
+   "runapp_Nup192_0/mean_Nup192_01C_S016_0_01.sub" u 1:($2-$3) w l lt 3 not, \
+"runapp_Nup192_0/data_Nup192_01D_S018_0_01.sub" u 1:($4==1?$2:1/0):3 w yerr t "Nup192_01D_S018_0_01.sub", \
+   "runapp_Nup192_0/mean_Nup192_01D_S018_0_01.sub" u 1:2 w l lt 4 not, \
+   "runapp_Nup192_0/mean_Nup192_01D_S018_0_01.sub" u 1:($2+$3) w l lt 4 not, \
+   "runapp_Nup192_0/mean_Nup192_01D_S018_0_01.sub" u 1:($2-$3) w l lt 4 not, \
+"runapp_Nup192_0/data_Nup192_01E_S020_0_02.sub" u 1:($4==1?$2:1/0):3 w yerr t "Nup192_01E_S020_0_02.sub", \
+   "runapp_Nup192_0/mean_Nup192_01E_S020_0_02.sub" u 1:2 w l lt 5 not, \
+   "runapp_Nup192_0/mean_Nup192_01E_S020_0_02.sub" u 1:($2+$3) w l lt 5 not, \
+   "runapp_Nup192_0/mean_Nup192_01E_S020_0_02.sub" u 1:($2-$3) w l lt 5 not, \
+"runapp_Nup192_0/data_Nup192_01F_S022_0_02.sub" u 1:($4==1?$2:1/0):3 w yerr t "Nup192_01F_S022_0_02.sub", \
+   "runapp_Nup192_0/mean_Nup192_01F_S022_0_02.sub" u 1:2 w l lt 6 not, \
+   "runapp_Nup192_0/mean_Nup192_01F_S022_0_02.sub" u 1:($2+$3) w l lt 6 not, \
+   "runapp_Nup192_0/mean_Nup192_01F_S022_0_02.sub" u 1:($2-$3) w l lt 6 not

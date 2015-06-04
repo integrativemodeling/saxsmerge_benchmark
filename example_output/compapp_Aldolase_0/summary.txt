@@ -1,0 +1,102 @@
+#STATISTICAL MERGE: SUMMARY
+
+Ran with the following arguments:
+saxs_merge --destdir=compapp_Aldolase_0 --blimit_fitting=240 --elimit_fitting=240 --blimit_hessian=80 --elimit_hessian=80 --berror --eerror --cmodel=normal --bmean=Full --stop=rescaling --postpone_cleanup --npoints=-1 --allfiles --outlevel=full runapp_Aldolase_0/data_merged.dat /home/yannick/imp/saxsmerge_benchmark/input/Aldolase/merge.dat
+
+Merge step skipped
+
+Input file 0
+  General
+   Filename: runapp_Aldolase_0/data_merged.dat
+   Number of points: 420 
+   Data range: 0.00603 0.23876 
+  2. GP parameters (values for non-rescaled curve)
+   mean function : Simple
+   G : 150.513462 +- 0.606231
+   Rg : 36.829246 +- 2.031919
+   A : 0.943519 +- 1.508584
+   sigma2 : 229.462365 +- 0.029357
+   tau : 1.482875 +- 1.097664
+   lambda : 0.022188 +- nan
+   Calculated Values
+    Q1 : 0.243750
+    Q1.Rg : 8.977126
+    I(0) : 121.014366
+   Hessian matrix : G Rg A sigma2 tau lambda
+    0.367516160011 -0.363256752491 0.430789768696 0.00171644345392 -0.969302892685 35.6414070129
+    -0.363256752491 4.1286945343 -1.34991729259 0.000188554506167 -0.329665958881 154.907196045
+    0.430789768696 -1.34991729259 2.27582597733 0.001429994707 -0.948123157024 17.5680522919
+    0.00171644345392 0.000188554506167 0.001429994707 0.000861810694914 0.0175091810524 -3.83481836319
+    -0.969302892685 -0.329665958881 -0.948123157024 0.0175091810524 1.20486676693 -42.0762557983
+    35.6414070129 154.907196045 17.5680522919 -3.83481836319 -42.0762557983 -3127.15209961
+  3. Rescaling
+  normal model
+   gamma : 0.796600408555
+  Skipped further steps
+
+Input file 1
+  General
+   Filename: /home/yannick/imp/saxsmerge_benchmark/input/Aldolase/merge.dat
+   Number of points: 701 
+   Data range: 0.00548 0.38844 
+  2. GP parameters (values for non-rescaled curve)
+   mean function : Simple
+   G : 121.947973 +- 0.643241
+   Rg : 36.135080 +- 1.728945
+   A : 0.299372 +- 1.752855
+   sigma2 : 654.546440 +- 0.009877
+   tau : 1.511994 +- 1.605521
+   lambda : 0.025559 +- 506.649302
+   Calculated Values
+    Q1 : 0.397332
+    Q1.Rg : 14.357636
+    I(0) : 122.110588
+   Hessian matrix : G Rg A sigma2 tau lambda
+    0.413759022951 -0.179120928049 0.451756775379 0.000470285682241 -1.09205055237 -5.11149215698
+    -0.179120928049 2.98925018311 -0.906062304974 -0.00081042671809 2.28995490074 262.008605957
+    0.451756775379 -0.906062304974 3.07249927521 0.000425524252933 -1.36880636215 -46.8292312622
+    0.000470285682241 -0.00081042671809 0.000425524252933 9.75625152932e-05 0.00457957573235 -0.589545845985
+    -1.09205055237 2.28995490074 -1.36880636215 0.00457957573235 2.57769751549 -859.647827148
+    -5.11149215698 262.008605957 -46.8292312622 -0.589545845985 -859.647827148 256693.515625
+  3. Rescaling
+  normal model
+   gamma : 1.0
+  Skipped further steps
+
+List of all options used for the merge:
+ name (type) = "value"
+ Nreps (list)= "[10, 10]"
+ aalpha (float)= "0.05"
+ acutoff (float)= "0.1"
+ allfiles (bool)= "True"
+ auto (bool)= "False"
+ baverage (bool)= "False"
+ berror (bool)= "True"
+ blimit_fitting (int)= "240"
+ blimit_hessian (int)= "80"
+ bmean (str)= "Full"
+ bnocomp (bool)= "False"
+ cmodel (str)= "normal"
+ cnpoints (int)= "200"
+ creference (str)= "last"
+ dalpha (float)= "0.05"
+ destdir (str)= "compapp_Aldolase_0"
+ eaverage (bool)= "False"
+ eerror (bool)= "True"
+ eextrapolate (int)= "0"
+ elimit_fitting (int)= "240"
+ elimit_hessian (int)= "80"
+ emean (str)= "Full"
+ enocomp (bool)= "False"
+ enoextrapolate (bool)= "False"
+ filenames (list)= "['runapp_Aldolase_0/data_merged.dat', '/home/yannick/imp/saxsmerge_benchmark/input/Aldolase/merge.dat']"
+ header (bool)= "False"
+ mergename (str)= "merged.dat"
+ npoints (int)= "-1"
+ outlevel (str)= "full"
+ postpone_cleanup (bool)= "True"
+ remove_noisy (bool)= "False"
+ remove_redundant (bool)= "False"
+ stop (str)= "rescaling"
+ sumname (str)= "summary.txt"
+ verbose (int)= "0"

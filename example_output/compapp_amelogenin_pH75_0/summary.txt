@@ -1,0 +1,100 @@
+#STATISTICAL MERGE: SUMMARY
+
+Ran with the following arguments:
+saxs_merge --destdir=compapp_amelogenin_pH75_0 --blimit_fitting=240 --elimit_fitting=240 --blimit_hessian=80 --elimit_hessian=80 --berror --eerror --cmodel=normal --bmean=Full --stop=rescaling --postpone_cleanup --npoints=-1 --allfiles --outlevel=full runapp_amelogenin_pH75_0/data_merged.dat /home/yannick/imp/saxsmerge_benchmark/input/amelogenin_pH75/amelogenin_pH75_merged.dat
+
+Merge step skipped
+
+Input file 0
+  General
+   Filename: runapp_amelogenin_pH75_0/data_merged.dat
+   Number of points: 547 
+   Data range: 0.01244 0.52568 
+  2. GP parameters (values for non-rescaled curve)
+   mean function : Flat
+   A : 20.838308 +- 0.055818
+   sigma2 : 32.893273 +- 0.303964
+   tau : 39.944207 +- 0.083576
+   lambda : 0.054143 +- nan
+   Calculated Values
+    Q1 : 0.000000
+    Q1.Rg : 0.000000
+    I(0) : nan
+   Hessian matrix : A sigma2 tau lambda
+    0.00311568309553 0.000668559339829 -0.000974670401774 -0.682439923286
+    0.000668559339829 0.0923939272761 0.0119842430577 -29.3666038513
+    -0.000974670401774 0.0119842430577 0.00698500825092 -3.46321058273
+    -0.682439923286 -29.3666038513 -3.46321058273 -7673.28076172
+  3. Rescaling
+  normal model
+   gamma : 5.9755145707
+  Skipped further steps
+
+Input file 1
+  General
+   Filename: /home/yannick/imp/saxsmerge_benchmark/input/amelogenin_pH75/amelogenin_pH75_merged.dat
+   Number of points: 509 
+   Data range: 0.01244 0.48562 
+  2. GP parameters (values for non-rescaled curve)
+   mean function : Generalized
+   G : 275.854805 +- 0.516757
+   Rg : 60.820935 +- 3.617808
+   d : 1.675894 +- 130.562208
+   A : 4.309933 +- 14.773494
+   sigma2 : 11.416197 +- 0.497814
+   tau : 0.210451 +- 16.169556
+   lambda : 0.013537 +- 114.111051
+   Calculated Values
+    Q1 : 0.026068
+    Q1.Rg : 1.585510
+    I(0) : 280.158269
+   Hessian matrix : G Rg d A sigma2 tau lambda
+    0.267037689686 -1.84086418152 -48.0330810547 3.6873691082 -0.020375456661 -1.01850283146 -6.01285219193
+    -1.84086418152 13.0885343552 366.254119873 -27.7193222046 0.14352580905 7.69745922089 46.7530517578
+    -48.0330810547 366.254119873 17046.4902344 -1586.41870117 0.30480286479 202.789535522 543.932556152
+    3.6873691082 -27.7193222046 -1586.41870117 218.256134033 -0.15299116075 19.6533374786 278.305603027
+    -0.020375456661 0.14352580905 0.30480286479 -0.15299116075 0.24781909585 1.84339010715 -31.6629199982
+    -1.01850283146 7.69745922089 202.789535522 19.6533374786 1.84339010715 261.454528809 322.162231445
+    -6.01285219193 46.7530517578 543.932556152 278.305603027 -31.6629199982 322.162231445 13021.3320312
+  3. Rescaling
+  normal model
+   gamma : 1.0
+  Skipped further steps
+
+List of all options used for the merge:
+ name (type) = "value"
+ Nreps (list)= "[10, 10]"
+ aalpha (float)= "0.05"
+ acutoff (float)= "0.1"
+ allfiles (bool)= "True"
+ auto (bool)= "False"
+ baverage (bool)= "False"
+ berror (bool)= "True"
+ blimit_fitting (int)= "240"
+ blimit_hessian (int)= "80"
+ bmean (str)= "Full"
+ bnocomp (bool)= "False"
+ cmodel (str)= "normal"
+ cnpoints (int)= "200"
+ creference (str)= "last"
+ dalpha (float)= "0.05"
+ destdir (str)= "compapp_amelogenin_pH75_0"
+ eaverage (bool)= "False"
+ eerror (bool)= "True"
+ eextrapolate (int)= "0"
+ elimit_fitting (int)= "240"
+ elimit_hessian (int)= "80"
+ emean (str)= "Full"
+ enocomp (bool)= "False"
+ enoextrapolate (bool)= "False"
+ filenames (list)= "['runapp_amelogenin_pH75_0/data_merged.dat', '/home/yannick/imp/saxsmerge_benchmark/input/amelogenin_pH75/amelogenin_pH75_merged.dat']"
+ header (bool)= "False"
+ mergename (str)= "merged.dat"
+ npoints (int)= "-1"
+ outlevel (str)= "full"
+ postpone_cleanup (bool)= "True"
+ remove_noisy (bool)= "False"
+ remove_redundant (bool)= "False"
+ stop (str)= "rescaling"
+ sumname (str)= "summary.txt"
+ verbose (int)= "0"

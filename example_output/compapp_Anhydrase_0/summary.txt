@@ -1,0 +1,106 @@
+#STATISTICAL MERGE: SUMMARY
+
+Ran with the following arguments:
+saxs_merge --destdir=compapp_Anhydrase_0 --blimit_fitting=240 --elimit_fitting=240 --blimit_hessian=80 --elimit_hessian=80 --berror --eerror --cmodel=normal --bmean=Full --stop=rescaling --postpone_cleanup --npoints=-1 --allfiles --outlevel=full runapp_Anhydrase_0/data_merged.dat /home/yannick/imp/saxsmerge_benchmark/input/Anhydrase/merge.dat
+
+Merge step skipped
+
+Input file 0
+  General
+   Filename: runapp_Anhydrase_0/data_merged.dat
+   Number of points: 642 
+   Data range: 0.00603 0.35952 
+  2. GP parameters (values for non-rescaled curve)
+   mean function : Generalized
+   G : 95.328546 +- 0.958639
+   Rg : 18.607449 +- 4.536364
+   d : 5.353241 +- 1.713779
+   A : 0.114093 +- 2.049808
+   sigma2 : 224.225356 +- 0.022799
+   tau : 0.876469 +- 3.709201
+   lambda : 0.053658 +- 78.534007
+   Calculated Values
+    Q1 : 0.152289
+    Q1.Rg : 2.833701
+    I(0) : 104.288645
+   Hessian matrix : G Rg d A sigma2 tau lambda
+    0.91898804903 -0.919699966908 0.00435977382585 1.02758514881 0.000525725306943 0.770910859108 1.27130782604
+    -0.919699966908 20.5785980225 -1.76706111431 -3.93635106087 -0.0019281435525 2.70473957062 172.39630127
+    0.00435977382585 -1.76706111431 2.93703722954 -0.470194190741 -9.1484245786e-05 0.0271515659988 11.1919469833
+    1.02758514881 -3.93635106087 -0.470194190741 4.20171260834 0.00103508296888 0.36524567008 8.14912223816
+    0.000525725306943 -0.0019281435525 -9.1484245786e-05 0.00103508296888 0.000519808731042 0.00323088094592 -0.253652632236
+    0.770910859108 2.70473957062 0.0271515659988 0.36524567008 0.00323088094592 13.7581720352 -182.607223511
+    1.27130782604 172.39630127 11.1919469833 8.14912223816 -0.253652632236 -182.607223511 6167.59033203
+  3. Rescaling
+  normal model
+   gamma : 1.0934773507
+  Skipped further steps
+
+Input file 1
+  General
+   Filename: /home/yannick/imp/saxsmerge_benchmark/input/Anhydrase/merge.dat
+   Number of points: 847 
+   Data range: 0.00548 0.46799 
+  2. GP parameters (values for non-rescaled curve)
+   mean function : Generalized
+   G : 104.853013 +- 1.627181
+   Rg : 18.954664 +- 7.551003
+   d : 7.999982 +- 0.797755
+   A : 0.659487 +- 4.245177
+   sigma2 : 281.038915 +- 0.015152
+   tau : 0.592285 +- 9.276903
+   lambda : 0.032681 +- 218.349974
+   Calculated Values
+    Q1 : 0.182757
+    Q1.Rg : 3.464098
+    I(0) : 105.259455
+   Hessian matrix : G Rg d A sigma2 tau lambda
+    2.64771747589 -4.85403633118 0.000222046059207 3.31845736504 -0.000100008961454 -0.0831417217851 26.7804031372
+    -4.85403633118 57.0176467896 -0.614261806011 -15.3560314178 -5.84669360251e-05 0.452589273453 337.608581543
+    0.000222046059207 -0.614261806011 0.6364133358 -0.248797506094 6.63821701892e-05 -0.600654065609 10.0240659714
+    3.31845736504 -15.3560314178 -0.248797506094 18.0215244293 -0.00102632795461 -0.32479211688 20.6609859467
+    -0.000100008961454 -5.84669360251e-05 6.63821701892e-05 -0.00102632795461 0.000229581302847 0.00322864786722 -0.199851885438
+    -0.0831417217851 0.452589273453 -0.600654065609 -0.32479211688 0.00322864786722 86.0609283447 -889.648376465
+    26.7804031372 337.608581543 10.0240659714 20.6609859467 -0.199851885438 -889.648376465 47676.7109375
+  3. Rescaling
+  normal model
+   gamma : 1.0
+  Skipped further steps
+
+List of all options used for the merge:
+ name (type) = "value"
+ Nreps (list)= "[10, 10]"
+ aalpha (float)= "0.05"
+ acutoff (float)= "0.1"
+ allfiles (bool)= "True"
+ auto (bool)= "False"
+ baverage (bool)= "False"
+ berror (bool)= "True"
+ blimit_fitting (int)= "240"
+ blimit_hessian (int)= "80"
+ bmean (str)= "Full"
+ bnocomp (bool)= "False"
+ cmodel (str)= "normal"
+ cnpoints (int)= "200"
+ creference (str)= "last"
+ dalpha (float)= "0.05"
+ destdir (str)= "compapp_Anhydrase_0"
+ eaverage (bool)= "False"
+ eerror (bool)= "True"
+ eextrapolate (int)= "0"
+ elimit_fitting (int)= "240"
+ elimit_hessian (int)= "80"
+ emean (str)= "Full"
+ enocomp (bool)= "False"
+ enoextrapolate (bool)= "False"
+ filenames (list)= "['runapp_Anhydrase_0/data_merged.dat', '/home/yannick/imp/saxsmerge_benchmark/input/Anhydrase/merge.dat']"
+ header (bool)= "False"
+ mergename (str)= "merged.dat"
+ npoints (int)= "-1"
+ outlevel (str)= "full"
+ postpone_cleanup (bool)= "True"
+ remove_noisy (bool)= "False"
+ remove_redundant (bool)= "False"
+ stop (str)= "rescaling"
+ sumname (str)= "summary.txt"
+ verbose (int)= "0"

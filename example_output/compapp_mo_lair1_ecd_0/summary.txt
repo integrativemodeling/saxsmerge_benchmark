@@ -1,0 +1,106 @@
+#STATISTICAL MERGE: SUMMARY
+
+Ran with the following arguments:
+saxs_merge --destdir=compapp_mo_lair1_ecd_0 --blimit_fitting=240 --elimit_fitting=240 --blimit_hessian=80 --elimit_hessian=80 --berror --eerror --cmodel=normal --bmean=Full --stop=rescaling --postpone_cleanup --npoints=-1 --allfiles --outlevel=full runapp_mo_lair1_ecd_0/data_merged.dat /home/yannick/imp/saxsmerge_benchmark/input/mo_lair1_ecd/mo_lair1_ecd_merged.dat
+
+Merge step skipped
+
+Input file 0
+  General
+   Filename: runapp_mo_lair1_ecd_0/data_merged.dat
+   Number of points: 364 
+   Data range: 0.01225 0.38794 
+  2. GP parameters (values for non-rescaled curve)
+   mean function : Generalized
+   G : 1133.760968 +- 0.045294
+   Rg : 17.847580 +- 2.351805
+   d : 2.942144 +- 3.432022
+   A : 14.852620 +- 0.106359
+   sigma2 : 28.594736 +- 0.207686
+   tau : 21.477937 +- 0.229829
+   lambda : 0.033226 +- 244.586090
+   Calculated Values
+    Q1 : 0.117706
+    Q1.Rg : 2.100766
+    I(0) : 135.464610
+   Hessian matrix : G Rg d A sigma2 tau lambda
+    0.00205154134892 -0.0445372313261 -0.00830636452883 0.00272663240321 -1.56466394401e-05 -7.73049177951e-05 -0.702715933323
+    -0.0445372313261 5.53098773956 -1.31148457527 -0.144857510924 -0.0158770997077 -0.00578670948744 4.94548463821
+    -0.00830636452883 -1.31148457527 11.7787752151 -0.151426523924 0.0403522625566 -0.00943813193589 -328.433990479
+    0.00272663240321 -0.144857510924 -0.151426523924 0.0113122500479 8.37419647723e-05 -0.000151656451635 0.0572868697345
+    -1.56466394401e-05 -0.0158770997077 0.0403522625566 8.37419647723e-05 0.0431334339082 0.000887620379217 -3.21166944504
+    -7.73049177951e-05 -0.00578670948744 -0.00943813193589 -0.000151656451635 0.000887620379217 0.0528214015067 -35.9818687439
+    -0.702715933323 4.94548463821 -328.433990479 0.0572868697345 -3.21166944504 -35.9818687439 59822.3554688
+  3. Rescaling
+  normal model
+   gamma : 0.116615796262
+  Skipped further steps
+
+Input file 1
+  General
+   Filename: /home/yannick/imp/saxsmerge_benchmark/input/mo_lair1_ecd/mo_lair1_ecd_merged.dat
+   Number of points: 355 
+   Data range: 0.03323 0.38694 
+  2. GP parameters (values for non-rescaled curve)
+   mean function : Generalized
+   G : 147.282967 +- 0.080996
+   Rg : 16.631928 +- 1.230503
+   d : 8.000000 +- 1.368026
+   A : 0.321587 +- 0.152671
+   sigma2 : 17.418067 +- 0.373770
+   tau : 11.735902 +- 0.347049
+   lambda : 0.067155 +- 216.662017
+   Calculated Values
+    Q1 : 0.208280
+    Q1.Rg : 3.464102
+    I(0) : 149.350252
+   Hessian matrix : G Rg d A sigma2 tau lambda
+    0.00656031444669 -0.000904375512619 -0.0027881290298 0.00656076706946 0.000698892166838 -0.00330772693269 -3.07992219925
+    -0.000904375512619 1.51413822174 -1.56358909607 -0.0287792868912 -0.0248088650405 0.139763280749 -34.2346229553
+    -0.0027881290298 -1.56358909607 1.87149453163 -0.000439159164671 0.0251333359629 0.0079900957644 -7.12508869171
+    0.00656076706946 -0.0287792868912 -0.000439159164671 0.0233084317297 -3.81285899493e-05 -0.00228578480892 -4.44252157211
+    0.000698892166838 -0.0248088650405 0.0251333359629 -3.81285899493e-05 0.139703705907 0.00746196741238 -6.1805973053
+    -0.00330772693269 0.139763280749 0.0079900957644 -0.00228578480892 0.00746196741238 0.120443210006 -64.9524230957
+    -3.07992219925 -34.2346229553 -7.12508869171 -4.44252157211 -6.1805973053 -64.9524230957 46942.4296875
+  3. Rescaling
+  normal model
+   gamma : 1.0
+  Skipped further steps
+
+List of all options used for the merge:
+ name (type) = "value"
+ Nreps (list)= "[10, 10]"
+ aalpha (float)= "0.05"
+ acutoff (float)= "0.1"
+ allfiles (bool)= "True"
+ auto (bool)= "False"
+ baverage (bool)= "False"
+ berror (bool)= "True"
+ blimit_fitting (int)= "240"
+ blimit_hessian (int)= "80"
+ bmean (str)= "Full"
+ bnocomp (bool)= "False"
+ cmodel (str)= "normal"
+ cnpoints (int)= "200"
+ creference (str)= "last"
+ dalpha (float)= "0.05"
+ destdir (str)= "compapp_mo_lair1_ecd_0"
+ eaverage (bool)= "False"
+ eerror (bool)= "True"
+ eextrapolate (int)= "0"
+ elimit_fitting (int)= "240"
+ elimit_hessian (int)= "80"
+ emean (str)= "Full"
+ enocomp (bool)= "False"
+ enoextrapolate (bool)= "False"
+ filenames (list)= "['runapp_mo_lair1_ecd_0/data_merged.dat', '/home/yannick/imp/saxsmerge_benchmark/input/mo_lair1_ecd/mo_lair1_ecd_merged.dat']"
+ header (bool)= "False"
+ mergename (str)= "merged.dat"
+ npoints (int)= "-1"
+ outlevel (str)= "full"
+ postpone_cleanup (bool)= "True"
+ remove_noisy (bool)= "False"
+ remove_redundant (bool)= "False"
+ stop (str)= "rescaling"
+ sumname (str)= "summary.txt"
+ verbose (int)= "0"

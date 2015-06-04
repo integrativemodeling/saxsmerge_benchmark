@@ -1,0 +1,281 @@
+#STATISTICAL MERGE: SUMMARY
+
+Ran with the following arguments:
+saxs_merge --aalpha=0.05 --auto --remove_redundant --remove_noisy --blimit_hessian=80 --elimit_hessian=80 --blimit_fitting=240 --elimit_fitting=240 /home/yannick/imp/saxsmerge_benchmark/input/Thyroglobulin/in1.dat /home/yannick/imp/saxsmerge_benchmark/input/Thyroglobulin/in2.dat /home/yannick/imp/saxsmerge_benchmark/input/Thyroglobulin/in3.dat /home/yannick/imp/saxsmerge_benchmark/input/Thyroglobulin/in4.dat /home/yannick/imp/saxsmerge_benchmark/input/Thyroglobulin/in5.dat /home/yannick/imp/saxsmerge_benchmark/input/Thyroglobulin/in6.dat --destdir=runapp_Thyroglobulin_0 --allfiles --outlevel=full --berror --eerror
+
+Merge file
+  General
+   Filename: merged.dat
+   Number of points: 940
+   Data range: 0.00712 0.53216
+   277 points from profile 0 (/home/yannick/imp/saxsmerge_benchmark/input/Thyroglobulin/in6.dat)
+   81 points from profile 1 (/home/yannick/imp/saxsmerge_benchmark/input/Thyroglobulin/in5.dat)
+   99 points from profile 2 (/home/yannick/imp/saxsmerge_benchmark/input/Thyroglobulin/in4.dat)
+   39 points from profile 3 (/home/yannick/imp/saxsmerge_benchmark/input/Thyroglobulin/in3.dat)
+   67 points from profile 4 (/home/yannick/imp/saxsmerge_benchmark/input/Thyroglobulin/in2.dat)
+   377 points from profile 5 (/home/yannick/imp/saxsmerge_benchmark/input/Thyroglobulin/in1.dat)
+  Gaussian Process parameters
+   mean function : Generalized
+   G : 172.517917 +- 0.614007
+   Rg : 70.678274 +- 1.630575
+   d : 7.378469 +- 2.511561
+   A : 0.638695 +- 2.183080
+   sigma2 : 254.688729 +- 0.016599
+   tau : 1.536753 +- 5.005300
+   lambda : 0.020453 +- 1328.449096
+  Calculated Values
+   Q1 : 0.047070
+   Q1.Rg : 3.326816
+   I(0) : 173.565344
+  Model Comparison : num_params -log10(Bayes Factor) -log(Posterior) -log(Likelihood) BIC AIC
+   Simple : 6	nan	nan	nan	nan	nan
+   Flat : 4	15.406260	41.223615	35.142172	-42.900824	-62.284343
+   Full : 8	inf	170.639679	159.970195	-265.173351	-303.940390
+   *Generalized : 7	-25.980767	-58.664184	-60.744267	169.409692	135.488533
+  Model Comparison : best model
+   Name : Generalized
+   Number of parameters : 7
+   -log(Posterior) : -58.664184
+   -log(Likelihood) : -60.744267
+  Hessian matrix : G Rg d A sigma2 tau lambda
+   0.377004772425 0.245012968779 0.0851983651519 0.316777765751 0.000958823540714 -1.05340790749 234.478042603
+   0.245012968779 2.6587741375 -0.217272117734 -0.303978770971 0.00453095231205 -4.56515455246 -5.72422838211
+   0.0851983651519 -0.217272117734 6.3079366684 -0.00179512484465 -0.00262876274064 2.19343233109 -928.386169434
+   0.316777765751 -0.303978770971 -0.00179512484465 4.76583909988 0.000412213237723 -0.672910451889 -2.39536237717
+   0.000958823540714 0.00453095231205 -0.00262876274064 0.000412213237723 0.000275512575172 0.00931878108531 -4.7547416687
+   -1.05340790749 -4.56515455246 2.19343233109 -0.672910451889 0.00931878108531 25.0530319214 -4698.09082031
+   234.478042603 -5.72422838211 -928.386169434 -2.39536237717 -4.7547416687 -4698.09082031 1764777.0   
+
+Input file 0
+  General
+   Filename: /home/yannick/imp/saxsmerge_benchmark/input/Thyroglobulin/in6.dat
+   Number of points: 1026 
+   Data range: 0.00548 0.58535 
+  1. Cleanup
+   Number of significant points: 443 
+   Data range: 0.00712 0.24916 
+  2. GP parameters (values for non-rescaled curve)
+   mean function : Simple
+   G : 173.254318 +- 0.522706
+   Rg : 70.512492 +- 1.265315
+   A : 1.079972 +- 1.398235
+   sigma2 : 269.413296 +- 0.015909
+   tau : 1.798352 +- 3.330871
+   lambda : 0.018319 +- 1117.590936
+   Calculated Values
+    Q1 : 0.242317
+    Q1.Rg : 17.086372
+    I(0) : 174.371365
+   Hessian matrix : G Rg A sigma2 tau lambda
+    0.273222059011 0.125808373094 0.249542579055 0.000374700757675 -0.360996812582 48.5352249146
+    0.125808373094 1.60102105141 -0.254755973816 0.00184380623978 -1.46418654919 -367.251037598
+    0.249542579055 -0.254755973816 1.95506083965 0.000126843238831 -0.156390711665 -6.9907708168
+    0.000374700757675 0.00184380623978 0.000126843238831 0.000253109581536 0.00237175333314 -1.19908571243
+    -0.360996812582 -1.46418654919 -0.156390711665 0.00237175333314 11.094704628 -2560.38110352
+    48.5352249146 -367.251037598 -6.9907708168 -1.19908571243 -2560.38110352 1249009.5   
+  3. Rescaling
+  normal model
+   gamma : 1.0
+  4. Classification
+   Number of valid points: 277 
+   Data range: 0.00712 0.24916 
+
+Input file 1
+  General
+   Filename: /home/yannick/imp/saxsmerge_benchmark/input/Thyroglobulin/in5.dat
+   Number of points: 1033 
+   Data range: 0.00548 0.58318 
+  1. Cleanup
+   Number of significant points: 654 
+   Data range: 0.00822 0.36553 
+  2. GP parameters (values for non-rescaled curve)
+   mean function : Flat
+   A : 21.586429 +- 0.048247
+   sigma2 : 297.759498 +- 0.011996
+   tau : 56.113507 +- 0.121178
+   lambda : 0.024178 +- 1117.072401
+   Calculated Values
+    Q1 : 0.000000
+    Q1.Rg : 0.000000
+    I(0) : nan
+   Hessian matrix : A sigma2 tau lambda
+    0.00232775206678 -2.20969286602e-05 0.000399152428145 1.307954669 
+    -2.20969286602e-05 0.000143904995639 3.78208096663e-06 -2.35521554947
+    0.000399152428145 3.78208096663e-06 0.0146841984242 -84.2270736694
+    1.307954669  -2.35521554947 -84.2270736694 1247850.75  
+  3. Rescaling
+  normal model
+   gamma : 0.716388940599
+  4. Classification
+   Number of valid points: 81 
+   Data range: 0.01479 0.36116 
+
+Input file 2
+  General
+   Filename: /home/yannick/imp/saxsmerge_benchmark/input/Thyroglobulin/in4.dat
+   Number of points: 1049 
+   Data range: 0.00548 0.58589 
+  1. Cleanup
+   Number of significant points: 919 
+   Data range: 0.00986 0.51151 
+  2. GP parameters (values for non-rescaled curve)
+   mean function : Generalized
+   G : 310.988730 +- 0.326614
+   Rg : 70.638300 +- 1.849687
+   d : 7.999995 +- 2.621562
+   A : 1.290549 +- 1.010805
+   sigma2 : 292.774296 +- 0.020104
+   tau : 3.133845 +- 2.272381
+   lambda : 0.022391 +- 1100.496308
+   Calculated Values
+    Q1 : 0.049040
+    Q1.Rg : 3.464100
+    I(0) : 171.669302
+   Hessian matrix : G Rg d A sigma2 tau lambda
+    0.106676399708 0.232612475753 0.0564302578568 0.0799543634057 0.000429578416515 -0.173007056117 115.327919006
+    0.232612475753 3.42134213448 -0.0610590986907 -0.0636878088117 0.0064272233285 -2.16307973862 -131.91255188
+    0.0564302578568 -0.0610590986907 6.87258481979 0.0158935133368 0.00183130509686 1.23349988461 -1171.40917969
+    0.0799543634057 -0.0636878088117 0.0158935133368 1.02172577381 0.000129856358399 -0.0992581620812 12.858045578
+    0.000429578416515 0.0064272233285 0.00183130509686 0.000129856358399 0.000404181657359 0.00311957485974 -3.64649486542
+    -0.173007056117 -2.16307973862 1.23349988461 -0.0992581620812 0.00311957485974 5.16371393204 -1866.10559082
+    115.327919006 -131.91255188 -1171.40917969 12.858045578 -3.64649486542 -1866.10559082 1211092.125 
+  3. Rescaling
+  normal model
+   gamma : 0.546795069866
+  4. Classification
+   Number of valid points: 99 
+   Data range: 0.03781 0.49085 
+
+Input file 3
+  General
+   Filename: /home/yannick/imp/saxsmerge_benchmark/input/Thyroglobulin/in3.dat
+   Number of points: 1052 
+   Data range: 0.00548 0.58481 
+  1. Cleanup
+   Number of significant points: 665 
+   Data range: 0.00986 0.37317 
+  2. GP parameters (values for non-rescaled curve)
+   mean function : Generalized
+   G : 383.240191 +- 0.507488
+   Rg : 68.009548 +- 2.618011
+   d : 8.000000 +- 2.679889
+   A : 1.034110 +- 1.996476
+   sigma2 : 283.886840 +- 0.015630
+   tau : 1.635139 +- 4.858833
+   lambda : 0.015017 +- 1009.838972
+   Calculated Values
+    Q1 : 0.050936
+    Q1.Rg : 3.464102
+    I(0) : 172.180560
+   Hessian matrix : G Rg d A sigma2 tau lambda
+    0.257543951273 -0.229701653123 -0.0427065305412 0.282218724489 0.000789663172327 -0.469192177057 27.2035770416
+    -0.229701653123 6.85398006439 -1.39706909657 -1.2154263258 0.00283561274409 -2.11797523499 -1104.44665527
+    -0.0427065305412 -1.39706909657 7.18180751801 -0.0941920131445 0.0106036486104 -0.54094594717 388.420013428
+    0.282218724489 -1.2154263258 -0.0941920131445 3.98591518402 0.000400355434977 -0.294171839952 1.93966400623
+    0.000789663172327 0.00283561274409 0.0106036486104 0.000400355434977 0.000244286726229 0.00792853441089 -3.71559000015
+    -0.469192177057 -2.11797523499 -0.54094594717 -0.294171839952 0.00792853441089 23.6082553864 -2735.44873047
+    27.2035770416 -1104.44665527 388.420013428 1.93966400623 -3.71559000015 -2735.44873047 1019774.75  
+  3. Rescaling
+  normal model
+   gamma : 0.447580170792
+  4. Classification
+   Number of valid points: 39 
+   Data range: 0.01644 0.36225 
+
+Input file 4
+  General
+   Filename: /home/yannick/imp/saxsmerge_benchmark/input/Thyroglobulin/in2.dat
+   Number of points: 1057 
+   Data range: 0.00548 0.58427 
+  1. Cleanup
+   Number of significant points: 944 
+   Data range: 0.01096 0.52618 
+  2. GP parameters (values for non-rescaled curve)
+   mean function : Flat
+   A : 22.753307 +- 0.024137
+   sigma2 : 290.654855 +- 0.019771
+   tau : 123.944347 +- 0.091130
+   lambda : 0.027438 +- 1221.910236
+   Calculated Values
+    Q1 : 0.000000
+    Q1.Rg : 0.000000
+    I(0) : nan
+   Hessian matrix : A sigma2 tau lambda
+    0.000582616310567 -1.46903275891e-05 0.000106993808004 1.01654756069
+    -1.46903275891e-05 0.000390893721487 0.000686500163283 -10.7266693115
+    0.000106993808004 0.000686500163283 0.00830469280481 -56.3235816956
+    1.01654756069 -10.7266693115 -56.3235816956 1493064.625 
+  3. Rescaling
+  normal model
+   gamma : 0.399746554122
+  4. Classification
+   Number of valid points: 67 
+   Data range: 0.01863 0.52618 
+
+Input file 5
+  General
+   Filename: /home/yannick/imp/saxsmerge_benchmark/input/Thyroglobulin/in1.dat
+   Number of points: 1047 
+   Data range: 0.00548 0.58589 
+  1. Cleanup
+   Number of significant points: 953 
+   Data range: 0.01096 0.53216 
+  2. GP parameters (values for non-rescaled curve)
+   mean function : Flat
+   A : 27.459990 +- 0.026803
+   sigma2 : 354.359302 +- 0.013336
+   tau : 113.937843 +- 0.096079
+   lambda : 0.026393 +- 1599.839367
+   Calculated Values
+    Q1 : 0.000000
+    Q1.Rg : 0.000000
+    I(0) : nan
+   Hessian matrix : A sigma2 tau lambda
+    0.000718391907867 -1.3471982129e-05 0.000111738831038 0.856751799583
+    -1.3471982129e-05 0.000177857480594 0.000468355574412 -8.46483707428
+    0.000111738831038 0.000468355574412 0.00923110358417 -79.9637680054
+    0.856751799583 -8.46483707428 -79.9637680054 2559486.0   
+  3. Rescaling
+  normal model
+   gamma : 0.388156498914
+  4. Classification
+   Number of valid points: 377 
+   Data range: 0.03233 0.53216 
+
+List of all options used for the merge:
+ name (type) = "value"
+ Nreps (list)= "[10, 10, 10, 10, 10, 10]"
+ aalpha (float)= "0.05"
+ acutoff (float)= "0.1"
+ allfiles (bool)= "True"
+ auto (bool)= "True"
+ baverage (bool)= "False"
+ berror (bool)= "True"
+ blimit_fitting (int)= "240"
+ blimit_hessian (int)= "80"
+ bmean (str)= "Full"
+ bnocomp (bool)= "False"
+ cmodel (str)= "normal"
+ cnpoints (int)= "200"
+ creference (str)= "last"
+ dalpha (float)= "0.05"
+ destdir (str)= "runapp_Thyroglobulin_0"
+ eaverage (bool)= "False"
+ eerror (bool)= "True"
+ eextrapolate (int)= "0"
+ elimit_fitting (int)= "240"
+ elimit_hessian (int)= "80"
+ emean (str)= "Full"
+ enocomp (bool)= "False"
+ enoextrapolate (bool)= "False"
+ filenames (list)= "['/home/yannick/imp/saxsmerge_benchmark/input/Thyroglobulin/in1.dat', '/home/yannick/imp/saxsmerge_benchmark/input/Thyroglobulin/in2.dat', '/home/yannick/imp/saxsmerge_benchmark/input/Thyroglobulin/in3.dat', '/home/yannick/imp/saxsmerge_benchmark/input/Thyroglobulin/in4.dat', '/home/yannick/imp/saxsmerge_benchmark/input/Thyroglobulin/in5.dat', '/home/yannick/imp/saxsmerge_benchmark/input/Thyroglobulin/in6.dat']"
+ header (bool)= "False"
+ mergename (str)= "merged.dat"
+ npoints (int)= "200"
+ outlevel (str)= "full"
+ postpone_cleanup (bool)= "False"
+ remove_noisy (bool)= "True"
+ remove_redundant (bool)= "True"
+ stop (str)= "merging"
+ sumname (str)= "summary.txt"
+ verbose (int)= "0"

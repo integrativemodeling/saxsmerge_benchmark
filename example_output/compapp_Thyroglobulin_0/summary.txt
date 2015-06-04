@@ -1,0 +1,106 @@
+#STATISTICAL MERGE: SUMMARY
+
+Ran with the following arguments:
+saxs_merge --destdir=compapp_Thyroglobulin_0 --blimit_fitting=240 --elimit_fitting=240 --blimit_hessian=80 --elimit_hessian=80 --berror --eerror --cmodel=normal --bmean=Full --stop=rescaling --postpone_cleanup --npoints=-1 --allfiles --outlevel=full runapp_Thyroglobulin_0/data_merged.dat /home/yannick/imp/saxsmerge_benchmark/input/Thyroglobulin/merge.dat
+
+Merge step skipped
+
+Input file 0
+  General
+   Filename: runapp_Thyroglobulin_0/data_merged.dat
+   Number of points: 940 
+   Data range: 0.00712 0.53216 
+  2. GP parameters (values for non-rescaled curve)
+   mean function : Generalized
+   G : 167.887890 +- 0.634098
+   Rg : 70.659070 +- 1.634187
+   d : 7.372192 +- 2.519986
+   A : 0.617661 +- 2.260653
+   sigma2 : 254.648951 +- 0.016578
+   tau : 1.485412 +- 5.187257
+   lambda : 0.020408 +- 1327.890903
+   Calculated Values
+    Q1 : 0.047063
+    Q1.Rg : 3.325400
+    I(0) : 173.762688
+   Hessian matrix : G Rg d A sigma2 tau lambda
+    0.402079880238 0.249639242887 0.0875630229712 0.338735342026 0.000991908251308 -1.1277923584 241.021087646
+    0.249639242887 2.67056775093 -0.224886551499 -0.319912552834 0.00453368760645 -4.72985124588 -9.59870147705
+    0.0875630229712 -0.224886551499 6.35032892227 -0.00258432491682 -0.00258178706281 2.27208733559 -927.798461914
+    0.338735342026 -0.319912552834 -0.00258432491682 5.11055278778 0.000423697696533 -0.719231069088 -2.1862051487
+    0.000991908251308 0.00453368760645 -0.00258178706281 0.000423697696533 0.00027482653968 0.00961290672421 -4.73100376129
+    -1.1277923584 -4.72985124588 2.27208733559 -0.719231069088 0.00961290672421 26.9076385498 -4861.05273438
+    241.021087646 -9.59870147705 -927.798461914 -2.1862051487 -4.73100376129 -4861.05273438 1763294.25  
+  3. Rescaling
+  normal model
+   gamma : 1.02886415794
+  Skipped further steps
+
+Input file 1
+  General
+   Filename: /home/yannick/imp/saxsmerge_benchmark/input/Thyroglobulin/merge.dat
+   Number of points: 1036 
+   Data range: 0.00548 0.57071 
+  2. GP parameters (values for non-rescaled curve)
+   mean function : Generalized
+   G : 170.295634 +- 0.607767
+   Rg : 71.933207 +- 2.100726
+   d : 7.994688 +- 7.300722
+   A : 0.781333 +- 1.934114
+   sigma2 : 1000.972216 +- 0.005182
+   tau : 1.755884 +- 5.599696
+   lambda : 0.021600 +- 1991.146780
+   Calculated Values
+    Q1 : 0.048141
+    Q1.Rg : 3.462951
+    I(0) : 172.923439
+   Hessian matrix : G Rg d A sigma2 tau lambda
+    0.369380861521 0.576302170753 -0.194274798036 0.27793431282 1.15335633382e-05 0.26466435194 122.906784058
+    0.576302170753 4.41305160522 -6.56734514236 -0.0220711771399 -0.00254012225196 -2.02693080902 -863.747497559
+    -0.194274798036 -6.56734514236 53.3005447388 -0.154372543097 0.0191901084036 1.3336057663 -1754.26391602
+    0.27793431282 -0.0220711771399 -0.154372543097 3.74079847336 9.96929156827e-05 0.228513106704 -78.366645813
+    1.15335633382e-05 -0.00254012225196 0.0191901084036 9.96929156827e-05 2.68487401627e-05 0.00157294597011 -0.486063659191
+    0.26466435194 -2.02693080902 1.3336057663 0.228513106704 0.00157294597011 31.3565921783 -7766.59863281
+    122.906784058 -863.747497559 -1754.26391602 -78.366645813 -0.486063659191 -7766.59863281 3964665.5   
+  3. Rescaling
+  normal model
+   gamma : 1.0
+  Skipped further steps
+
+List of all options used for the merge:
+ name (type) = "value"
+ Nreps (list)= "[10, 10]"
+ aalpha (float)= "0.05"
+ acutoff (float)= "0.1"
+ allfiles (bool)= "True"
+ auto (bool)= "False"
+ baverage (bool)= "False"
+ berror (bool)= "True"
+ blimit_fitting (int)= "240"
+ blimit_hessian (int)= "80"
+ bmean (str)= "Full"
+ bnocomp (bool)= "False"
+ cmodel (str)= "normal"
+ cnpoints (int)= "200"
+ creference (str)= "last"
+ dalpha (float)= "0.05"
+ destdir (str)= "compapp_Thyroglobulin_0"
+ eaverage (bool)= "False"
+ eerror (bool)= "True"
+ eextrapolate (int)= "0"
+ elimit_fitting (int)= "240"
+ elimit_hessian (int)= "80"
+ emean (str)= "Full"
+ enocomp (bool)= "False"
+ enoextrapolate (bool)= "False"
+ filenames (list)= "['runapp_Thyroglobulin_0/data_merged.dat', '/home/yannick/imp/saxsmerge_benchmark/input/Thyroglobulin/merge.dat']"
+ header (bool)= "False"
+ mergename (str)= "merged.dat"
+ npoints (int)= "-1"
+ outlevel (str)= "full"
+ postpone_cleanup (bool)= "True"
+ remove_noisy (bool)= "False"
+ remove_redundant (bool)= "False"
+ stop (str)= "rescaling"
+ sumname (str)= "summary.txt"
+ verbose (int)= "0"

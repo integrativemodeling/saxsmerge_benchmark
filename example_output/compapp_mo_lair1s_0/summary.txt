@@ -1,0 +1,104 @@
+#STATISTICAL MERGE: SUMMARY
+
+Ran with the following arguments:
+saxs_merge --destdir=compapp_mo_lair1s_0 --blimit_fitting=240 --elimit_fitting=240 --blimit_hessian=80 --elimit_hessian=80 --berror --eerror --cmodel=normal --bmean=Full --stop=rescaling --postpone_cleanup --npoints=-1 --allfiles --outlevel=full runapp_mo_lair1s_0/data_merged.dat /home/yannick/imp/saxsmerge_benchmark/input/mo_lair1s/mo_lair1s_merged.dat
+
+Merge step skipped
+
+Input file 0
+  General
+   Filename: runapp_mo_lair1s_0/data_merged.dat
+   Number of points: 361 
+   Data range: 0.01225 0.38794 
+  2. GP parameters (values for non-rescaled curve)
+   mean function : Generalized
+   G : 1490.063460 +- 0.029076
+   Rg : 16.669458 +- 1.887080
+   d : 8.000000 +- 0.215496
+   A : 31.977199 +- 0.060011
+   sigma2 : 28.476620 +- 0.222129
+   tau : 32.955949 +- 0.106452
+   lambda : 0.048861 +- 170.984254
+   Calculated Values
+    Q1 : 0.207811
+    Q1.Rg : 3.464102
+    I(0) : 119.186561
+   Hessian matrix : G Rg d A sigma2 tau lambda
+    0.000845415866934 -0.0144443660975 -6.52822491247e-05 0.000965944083873 0.000166837940924 -8.53917154018e-05 -0.58169478178
+    -0.0144443660975 3.56106948853 0.0254817456007 -0.0583680719137 -0.00302848778665 0.0246152952313 -59.1199531555
+    -6.52822491247e-05 0.0254817456007 0.0464385375381 -0.000793189799879 0.00193611974828 0.00304089440033 -10.3204574585
+    0.000965944083873 -0.0583680719137 -0.000793189799879 0.00360129331239 5.62771383557e-05 0.000934576441068 -0.497309982777
+    0.000166837940924 -0.00302848778665 0.00193611974828 5.62771383557e-05 0.0493411011994 0.000400228222134 -0.142204165459
+    -8.53917154018e-05 0.0246152952313 0.00304089440033 0.000934576441068 0.000400228222134 0.0113321132958 -13.7184028625
+    -0.58169478178 -59.1199531555 -10.3204574585 -0.497309982777 -0.142204165459 -13.7184028625 29235.6152344
+  3. Rescaling
+  normal model
+   gamma : 0.0776388482431
+  Skipped further steps
+
+Input file 1
+  General
+   Filename: /home/yannick/imp/saxsmerge_benchmark/input/mo_lair1s/mo_lair1s_merged.dat
+   Number of points: 367 
+   Data range: 0.02124 0.38694 
+  2. GP parameters (values for non-rescaled curve)
+   mean function : Simple
+   G : 113.113586 +- 0.567953
+   Rg : 16.408598 +- 3.330066
+   A : 2.729856 +- 1.381017
+   sigma2 : 14.143649 +- 0.471805
+   tau : 1.590094 +- 2.652526
+   lambda : 0.035478 +- 150.832100
+   Calculated Values
+    Q1 : 0.403475
+    Q1.Rg : 6.620467
+    I(0) : 117.158187
+   Hessian matrix : G Rg A sigma2 tau lambda
+    0.322570890188 -0.953104913235 0.426803678274 0.0119185717776 -0.202394247055 -16.0349330902
+    -0.953104913235 11.0893411636 -2.86999464035 0.0148492921144 -0.0744200944901 -103.800056458
+    0.426803678274 -2.86999464035 1.9072085619 0.00915888790041 0.187725067139 -10.3418712616
+    0.0119185717776 0.0148492921144 0.00915888790041 0.222600251436 0.0755276307464 -10.8613615036
+    -0.202394247055 -0.0744200944901 0.187725067139 0.0755276307464 7.03589391708 -169.963485718
+    -16.0349330902 -103.800056458 -10.3418712616 -10.8613615036 -169.963485718 22750.3222656
+  3. Rescaling
+  normal model
+   gamma : 1.0
+  Skipped further steps
+
+List of all options used for the merge:
+ name (type) = "value"
+ Nreps (list)= "[10, 10]"
+ aalpha (float)= "0.05"
+ acutoff (float)= "0.1"
+ allfiles (bool)= "True"
+ auto (bool)= "False"
+ baverage (bool)= "False"
+ berror (bool)= "True"
+ blimit_fitting (int)= "240"
+ blimit_hessian (int)= "80"
+ bmean (str)= "Full"
+ bnocomp (bool)= "False"
+ cmodel (str)= "normal"
+ cnpoints (int)= "200"
+ creference (str)= "last"
+ dalpha (float)= "0.05"
+ destdir (str)= "compapp_mo_lair1s_0"
+ eaverage (bool)= "False"
+ eerror (bool)= "True"
+ eextrapolate (int)= "0"
+ elimit_fitting (int)= "240"
+ elimit_hessian (int)= "80"
+ emean (str)= "Full"
+ enocomp (bool)= "False"
+ enoextrapolate (bool)= "False"
+ filenames (list)= "['runapp_mo_lair1s_0/data_merged.dat', '/home/yannick/imp/saxsmerge_benchmark/input/mo_lair1s/mo_lair1s_merged.dat']"
+ header (bool)= "False"
+ mergename (str)= "merged.dat"
+ npoints (int)= "-1"
+ outlevel (str)= "full"
+ postpone_cleanup (bool)= "True"
+ remove_noisy (bool)= "False"
+ remove_redundant (bool)= "False"
+ stop (str)= "rescaling"
+ sumname (str)= "summary.txt"
+ verbose (int)= "0"

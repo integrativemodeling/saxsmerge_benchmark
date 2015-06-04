@@ -1,0 +1,7 @@
+set term png 
+set output "Nup133_0_pdb_log.png"
+set log y
+set xrange [0:0.388548]
+set yrange [0.72786921046:134.29476028]
+p "compapp_Nup133_0/data_data_merged.dat" u 1:2:3 w yerr t "data", \
+  "compapp_Nup133_0/foxs.dat" u 1:2 w l t "FoXS chi=0.193848" lw 2

@@ -1,0 +1,256 @@
+#STATISTICAL MERGE: SUMMARY
+
+Ran with the following arguments:
+saxs_merge --aalpha=0.05 --auto --remove_redundant --remove_noisy --blimit_hessian=80 --elimit_hessian=80 --blimit_fitting=240 --elimit_fitting=240 /home/yannick/imp/saxsmerge_benchmark/input/mo_lair1s/mo_lig_apo_02B_S012_0_02.sub /home/yannick/imp/saxsmerge_benchmark/input/mo_lair1s/mo_lig_apo_02C_S014_0_02.sub /home/yannick/imp/saxsmerge_benchmark/input/mo_lair1s/mo_lig_apo_02D_S016_0_02.sub /home/yannick/imp/saxsmerge_benchmark/input/mo_lair1s/mo_lig_apo_02E_S018_0_02.sub /home/yannick/imp/saxsmerge_benchmark/input/mo_lair1s/mo_lig_apo_02F_S020_0_02.sub --destdir=runapp_mo_lair1s_0 --allfiles --outlevel=full --berror --eerror
+
+Merge file
+  General
+   Filename: merged.dat
+   Number of points: 361
+   Data range: 0.01225 0.38794
+   52 points from profile 0 (/home/yannick/imp/saxsmerge_benchmark/input/mo_lair1s/mo_lig_apo_02B_S012_0_02.sub)
+   58 points from profile 1 (/home/yannick/imp/saxsmerge_benchmark/input/mo_lair1s/mo_lig_apo_02C_S014_0_02.sub)
+   63 points from profile 2 (/home/yannick/imp/saxsmerge_benchmark/input/mo_lair1s/mo_lig_apo_02D_S016_0_02.sub)
+   63 points from profile 3 (/home/yannick/imp/saxsmerge_benchmark/input/mo_lair1s/mo_lig_apo_02E_S018_0_02.sub)
+   125 points from profile 4 (/home/yannick/imp/saxsmerge_benchmark/input/mo_lair1s/mo_lig_apo_02F_S020_0_02.sub)
+  Gaussian Process parameters
+   mean function : Generalized
+   G : 109.344709 +- 0.396165
+   Rg : 16.669486 +- 1.886763
+   d : 8.000000 +- 0.215531
+   A : 2.346463 +- 0.817634
+   sigma2 : 28.477439 +- 0.222116
+   tau : 2.418759 +- 1.450281
+   lambda : 0.048865 +- 170.972129
+  Calculated Values
+   Q1 : 0.207811
+   Q1.Rg : 3.464102
+   I(0) : 112.652385
+  Model Comparison : num_params -log10(Bayes Factor) -log(Posterior) -log(Likelihood) BIC AIC
+   Simple : 6	43.701973	103.413199	102.216227	-169.099187	-192.432455
+   Flat : 4	51.870826	125.259907	120.995580	-218.435649	-233.991160
+   Full : 8	inf	126.562572	123.443354	-199.775684	-230.886708
+   *Generalized : 7	42.687727	103.666254	102.452591	-163.683036	-190.905182
+  Model Comparison : best model
+   Name : Generalized
+   Number of parameters : 7
+   -log(Posterior) : 103.666254
+   -log(Likelihood) : 102.452591
+  Hessian matrix : G Rg d A sigma2 tau lambda
+   0.156946629286 -0.196733340621 -0.000889546470717 0.179317101836 0.00227268598974 -0.0158376842737 -7.92626714706
+   -0.196733340621 3.55987286568 0.0254808031023 -0.7950745821 -0.00302937417291 0.335403740406 -59.1118812561
+   -0.000889546470717 0.0254808031023 0.0464535653591 -0.0108046485111 0.00193682918325 0.0414313785732 -10.3206949234
+   0.179317101836 -0.7950745821 -0.0108046485111 0.668525993824 0.000766380515415 0.173522502184 -6.77862071991
+   0.00227268598974 -0.00302937417291 0.00193682918325 0.000766380515415 0.0493355579674 0.00545522477478 -0.143250197172
+   -0.0158376842737 0.335403740406 0.0414313785732 0.173522502184 0.00545522477478 2.10331559181 -186.905670166
+   -7.92626714706 -59.1118812561 -10.3206949234 -6.77862071991 -0.143250197172 -186.905670166 29231.46875 
+
+Input file 0
+  General
+   Filename: /home/yannick/imp/saxsmerge_benchmark/input/mo_lair1s/mo_lig_apo_02B_S012_0_02.sub
+   Number of points: 328 
+   Data range: 0.01225 0.38794 
+  1. Cleanup
+   Number of significant points: 204 
+   Data range: 0.01225 0.21508 
+  2. GP parameters (values for non-rescaled curve)
+   mean function : Generalized
+   G : 8.221659 +- 8.271624
+   Rg : 17.406748 +- 4.099744
+   d : 8.000000 +- 0.290118
+   A : 0.593887 +- 18.160462
+   sigma2 : 21.882046 +- 0.266844
+   tau : 0.103001 +- 24.793804
+   lambda : 0.020501 +- 103.440611
+   Calculated Values
+    Q1 : 0.199009
+    Q1.Rg : 3.464102
+    I(0) : 110.930143
+   Hessian matrix : G Rg d A sigma2 tau lambda
+    68.4197692871 -22.1295661926 0.00027130372473 106.468002319 -0.0304966755211 -119.872169495 -226.739639282
+    -22.1295661926 16.8079013824 -0.0777199417353 -64.1158370972 0.0225606970489 16.5864200592 33.9825057983
+    0.00027130372473 -0.0777199417353 0.0841684192419 -0.235222131014 -0.00135030341335 0.286750048399 1.05031681061
+    106.468002319 -64.1158370972 -0.235222131014 329.802368164 -0.0359364263713 -167.781616211 -191.660232544
+    -0.0304966755211 0.0225606970489 -0.00135030341335 -0.0359364263713 0.0712054818869 0.331524461508 0.552910506725
+    -119.872169495 16.5864200592 0.286750048399 -167.781616211 0.331524461508 614.732727051 -910.180603027
+    -226.739639282 33.9825057983 1.05031681061 -191.660232544 0.552910506725 -910.180603027 10699.9599609
+  3. Rescaling
+  normal model
+   gamma : 12.5124369733
+  4. Classification
+   Number of valid points: 52 
+   Data range: 0.01225 0.21508 
+
+Input file 1
+  General
+   Filename: /home/yannick/imp/saxsmerge_benchmark/input/mo_lair1s/mo_lig_apo_02C_S014_0_02.sub
+   Number of points: 363 
+   Data range: 0.01225 0.38794 
+  1. Cleanup
+   Number of significant points: 265 
+   Data range: 0.01225 0.27603 
+  2. GP parameters (values for non-rescaled curve)
+   mean function : Simple
+   G : 20.878661 +- 1.571272
+   Rg : 17.081168 +- 1.500953
+   A : 0.799060 +- 2.758526
+   sigma2 : 25.684339 +- 0.190018
+   tau : 0.579639 +- 4.751419
+   lambda : 0.059215 +- 102.883007
+   Calculated Values
+    Q1 : 0.309086
+    Q1.Rg : 5.279553
+    I(0) : 113.474784
+   Hessian matrix : G Rg A sigma2 tau lambda
+    2.46889543533 -0.296947389841 2.63037419319 0.0169884916395 -2.59488940239 0.241325423121
+    -0.296947389841 2.2528591156 -1.99295401573 0.00522461626679 0.694402694702 -19.1257610321
+    2.63037419319 -1.99295401573 7.60946512222 0.012352376245 -2.60890340805 3.15079903603
+    0.0169884916395 0.00522461626679 0.012352376245 0.0361069589853 0.0997847095132 -2.94672966003
+    -2.59488940239 0.694402694702 -2.60890340805 0.0997847095132 22.5759868622 -389.645568848
+    0.241325423121 -19.1257610321 3.15079903603 -2.94672966003 -389.645568848 10584.9130859
+  3. Rescaling
+  normal model
+   gamma : 5.22358821269
+  4. Classification
+   Number of valid points: 58 
+   Data range: 0.02723 0.26004 
+
+Input file 2
+  General
+   Filename: /home/yannick/imp/saxsmerge_benchmark/input/mo_lair1s/mo_lig_apo_02D_S016_0_02.sub
+   Number of points: 373 
+   Data range: 0.01225 0.38794 
+  1. Cleanup
+   Number of significant points: 291 
+   Data range: 0.01324 0.30301 
+  2. GP parameters (values for non-rescaled curve)
+   mean function : Simple
+   G : 35.411689 +- 0.876864
+   Rg : 17.487613 +- 1.308818
+   A : 1.474510 +- 1.656606
+   sigma2 : 24.013999 +- 0.294724
+   tau : 1.080714 +- 2.980404
+   lambda : 0.049610 +- 112.664281
+   Calculated Values
+    Q1 : 0.318540
+    Q1.Rg : 5.570501
+    I(0) : 116.557878
+   Hessian matrix : G Rg A sigma2 tau lambda
+    0.768889784813 -0.253086864948 0.862815618515 0.0132577121258 -1.09859192371 -1.43848240376
+    -0.253086864948 1.71300435066 -1.14729273319 -0.00263226917014 -0.0868538022041 15.1591358185
+    0.862815618515 -1.14729273319 2.7443447113 0.0195823423564 -1.18458116055 -1.81668806076
+    0.0132577121258 -0.00263226917014 0.0195823423564 0.0868623331189 0.0804660245776 -4.58840703964
+    -1.09859192371 -0.0868538022041 -1.18458116055 0.0804660245776 8.88280773163 -239.792709351
+    -1.43848240376 15.1591358185 -1.81668806076 -4.58840703964 -239.792709351 12693.2402344
+  3. Rescaling
+  normal model
+   gamma : 3.13644430618
+  4. Classification
+   Number of valid points: 63 
+   Data range: 0.03123 0.30301 
+
+Input file 3
+  General
+   Filename: /home/yannick/imp/saxsmerge_benchmark/input/mo_lair1s/mo_lig_apo_02E_S018_0_02.sub
+   Number of points: 376 
+   Data range: 0.01225 0.38794 
+  1. Cleanup
+   Number of significant points: 328 
+   Data range: 0.01324 0.33998 
+  2. GP parameters (values for non-rescaled curve)
+   mean function : Simple
+   G : 45.785492 +- 0.557890
+   Rg : 16.752616 +- 1.165763
+   A : 1.279898 +- 0.990983
+   sigma2 : 23.237489 +- 0.316652
+   tau : 1.730067 +- 1.883685
+   lambda : 0.065637 +- 156.271280
+   Calculated Values
+    Q1 : 0.365191
+    Q1.Rg : 6.117907
+    I(0) : 113.719819
+   Hessian matrix : G Rg A sigma2 tau lambda
+    0.311240792274 -0.00830557662994 0.316063523293 0.00366253568791 -0.2150606215 -5.7705950737
+    -0.00830557662994 1.35900449753 -0.432041406631 -0.00345062208362 0.517936587334 -13.6971111298
+    0.316063523293 -0.432041406631 0.982046842575 0.00102767848875 -0.122826129198 -19.4688415527
+    0.00366253568791 -0.00345062208362 0.00102767848875 0.100268505514 0.0189432837069 -0.720864295959
+    -0.2150606215 0.517936587334 -0.122826129198 0.0189432837069 3.54826807976 -256.524505615
+    -5.7705950737 -13.6971111298 -19.4688415527 -0.720864295959 -256.524505615 24420.7128906
+  3. Rescaling
+  normal model
+   gamma : 2.41358736832
+  4. Classification
+   Number of valid points: 63 
+   Data range: 0.01424 0.33998 
+
+Input file 4
+  General
+   Filename: /home/yannick/imp/saxsmerge_benchmark/input/mo_lair1s/mo_lig_apo_02F_S020_0_02.sub
+   Number of points: 377 
+   Data range: 0.01225 0.38794 
+  1. Cleanup
+   Number of significant points: 377 
+   Data range: 0.01225 0.38794 
+  2. GP parameters (values for non-rescaled curve)
+   mean function : Simple
+   G : 115.834105 +- 0.096615
+   Rg : 14.345427 +- 0.953003
+   A : 1.030488 +- 0.162208
+   sigma2 : 25.695900 +- 0.225976
+   tau : 10.363674 +- 0.429629
+   lambda : 0.089505 +- 126.352171
+   Calculated Values
+    Q1 : 0.484809
+    Q1.Rg : 6.954787
+    I(0) : 116.892712
+   Hessian matrix : G Rg A sigma2 tau lambda
+    0.00933436490595 0.0121961403638 0.00884086918086 0.000115776674647 -0.00060171779478 0.719907820225
+    0.0121961403638 0.908214747906 -0.0419441983104 -0.0143419271335 0.00401187129319 55.016544342
+    0.00884086918086 -0.0419441983104 0.0263114590198 0.000612787494902 0.00250276946463 -2.72636532784
+    0.000115776674647 -0.0143419271335 0.000612787494902 0.0510650798678 0.00271201739088 0.849772453308
+    -0.00060171779478 0.00401187129319 0.00250276946463 0.00271201739088 0.184581026435 -45.5383033752
+    0.719907820225 55.016544342 -2.72636532784 0.849772453308 -45.5383033752 15964.8710938
+  3. Rescaling
+  normal model
+   gamma : 1.0
+  4. Classification
+   Number of valid points: 125 
+   Data range: 0.01924 0.38794 
+
+List of all options used for the merge:
+ name (type) = "value"
+ Nreps (list)= "[10, 10, 10, 10, 10]"
+ aalpha (float)= "0.05"
+ acutoff (float)= "0.1"
+ allfiles (bool)= "True"
+ auto (bool)= "True"
+ baverage (bool)= "False"
+ berror (bool)= "True"
+ blimit_fitting (int)= "240"
+ blimit_hessian (int)= "80"
+ bmean (str)= "Full"
+ bnocomp (bool)= "False"
+ cmodel (str)= "normal"
+ cnpoints (int)= "200"
+ creference (str)= "last"
+ dalpha (float)= "0.05"
+ destdir (str)= "runapp_mo_lair1s_0"
+ eaverage (bool)= "False"
+ eerror (bool)= "True"
+ eextrapolate (int)= "0"
+ elimit_fitting (int)= "240"
+ elimit_hessian (int)= "80"
+ emean (str)= "Full"
+ enocomp (bool)= "False"
+ enoextrapolate (bool)= "False"
+ filenames (list)= "['/home/yannick/imp/saxsmerge_benchmark/input/mo_lair1s/mo_lig_apo_02B_S012_0_02.sub', '/home/yannick/imp/saxsmerge_benchmark/input/mo_lair1s/mo_lig_apo_02C_S014_0_02.sub', '/home/yannick/imp/saxsmerge_benchmark/input/mo_lair1s/mo_lig_apo_02D_S016_0_02.sub', '/home/yannick/imp/saxsmerge_benchmark/input/mo_lair1s/mo_lig_apo_02E_S018_0_02.sub', '/home/yannick/imp/saxsmerge_benchmark/input/mo_lair1s/mo_lig_apo_02F_S020_0_02.sub']"
+ header (bool)= "False"
+ mergename (str)= "merged.dat"
+ npoints (int)= "200"
+ outlevel (str)= "full"
+ postpone_cleanup (bool)= "False"
+ remove_noisy (bool)= "True"
+ remove_redundant (bool)= "True"
+ stop (str)= "merging"
+ sumname (str)= "summary.txt"
+ verbose (int)= "0"

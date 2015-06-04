@@ -1,0 +1,106 @@
+#STATISTICAL MERGE: SUMMARY
+
+Ran with the following arguments:
+saxs_merge --destdir=compapp_Y2_0 --blimit_fitting=240 --elimit_fitting=240 --blimit_hessian=80 --elimit_hessian=80 --berror --eerror --cmodel=normal --bmean=Full --stop=rescaling --postpone_cleanup --npoints=-1 --allfiles --outlevel=full runapp_Y2_0/data_merged.dat /home/yannick/imp/saxsmerge_benchmark/input/Y2/Y2_merge.dat
+
+Merge step skipped
+
+Input file 0
+  General
+   Filename: runapp_Y2_0/data_merged.dat
+   Number of points: 1399 
+   Data range: 0.11922 3.94172 
+  2. GP parameters (values for non-rescaled curve)
+   mean function : Simple
+   G : 282.714399 +- 0.010410
+   Rg : 1.103503 +- 2.285992
+   A : -3.452408 +- 0.018334
+   sigma2 : 4.946895 +- 1.248726
+   tau : 102.362044 +- 0.042181
+   lambda : 0.684440 +- 24.018605
+   Calculated Values
+    Q1 : 14.511688
+    Q1.Rg : 16.013696
+    I(0) : 161.233965
+   Hessian matrix : G Rg A sigma2 tau lambda
+    0.000108373948024 -0.00799034070224 0.000125338410726 0.0003418654087 -8.24044909677e-05 -0.0362023189664
+    -0.00799034070224 5.22576093674 -0.0203852318227 -0.0657643973827 0.015935452655 12.2365608215
+    0.000125338410726 -0.0203852318227 0.000336152792443 0.0002777207701 -0.000134567191708 -0.0673766359687
+    0.0003418654087 -0.0657643973827 0.0002777207701 1.55931544304 0.00253362581134 0.242338597775
+    -8.24044909677e-05 0.015935452655 -0.000134567191708 0.00253362581134 0.00177922099829 -0.765902042389
+    -0.0362023189664 12.2365608215 -0.0673766359687 0.242338597775 -0.765902042389 576.893371582
+  3. Rescaling
+  normal model
+   gamma : 0.638687977284
+  Skipped further steps
+
+Input file 1
+  General
+   Filename: /home/yannick/imp/saxsmerge_benchmark/input/Y2/Y2_merge.dat
+   Number of points: 2116 
+   Data range: 0.14654 5.93084 
+  2. GP parameters (values for non-rescaled curve)
+   mean function : Full
+   G : 33.568482 +- 0.588765
+   Rg : 2.873540 +- 4.244686
+   d : 8.000000 +- 0.176188
+   s : 0.624241 +- 45.326480
+   A : 7.498453 +- 0.368733
+   sigma2 : 3.916822 +- 1.079277
+   tau : 6.279511 +- 0.821573
+   lambda : 0.533798 +- 20.698396
+   Calculated Values
+    Q1 : 1.030083
+    Q1.Rg : 2.959985
+    I(0) : inf
+   Hessian matrix : G Rg d s A sigma2 tau lambda
+    0.346643865108 1.47969853878 0.00307137705386 25.7394294739 0.0540924780071 -0.112142898142 0.138017714024 3.879737854 
+    1.47969853878 18.0173568726 -0.00520958099514 128.214920044 -0.127433300018 -0.448626637459 -2.64182972908 54.5126686096
+    0.00307137705386 -0.00520958099514 0.0310423634946 0.319747537374 -0.000101170095149 0.0100423060358 -0.00305432640016 0.241467803717
+    25.7394294739 128.214920044 0.319747537374 2054.48974609 2.81955051422 -11.9565839767 0.985232770443 364.984313965
+    0.0540924780071 -0.127433300018 -0.000101170095149 2.81955051422 0.135964021087 -0.0060887937434 -0.0672334805131 -0.560172021389
+    -0.112142898142 -0.448626637459 0.0100423060358 -11.9565839767 -0.0060887937434 1.16483962536 -0.00773112941533 0.893034219742
+    0.138017714024 -2.64182972908 -0.00305432640016 0.985232770443 -0.0672334805131 -0.00773112941533 0.674981415272 -5.82948160172
+    3.879737854  54.5126686096 0.241467803717 364.984313965 -0.560172021389 0.893034219742 -5.82948160172 428.423614502
+  3. Rescaling
+  normal model
+   gamma : 1.0
+  Skipped further steps
+
+List of all options used for the merge:
+ name (type) = "value"
+ Nreps (list)= "[10, 10]"
+ aalpha (float)= "0.05"
+ acutoff (float)= "0.1"
+ allfiles (bool)= "True"
+ auto (bool)= "False"
+ baverage (bool)= "False"
+ berror (bool)= "True"
+ blimit_fitting (int)= "240"
+ blimit_hessian (int)= "80"
+ bmean (str)= "Full"
+ bnocomp (bool)= "False"
+ cmodel (str)= "normal"
+ cnpoints (int)= "200"
+ creference (str)= "last"
+ dalpha (float)= "0.05"
+ destdir (str)= "compapp_Y2_0"
+ eaverage (bool)= "False"
+ eerror (bool)= "True"
+ eextrapolate (int)= "0"
+ elimit_fitting (int)= "240"
+ elimit_hessian (int)= "80"
+ emean (str)= "Full"
+ enocomp (bool)= "False"
+ enoextrapolate (bool)= "False"
+ filenames (list)= "['runapp_Y2_0/data_merged.dat', '/home/yannick/imp/saxsmerge_benchmark/input/Y2/Y2_merge.dat']"
+ header (bool)= "False"
+ mergename (str)= "merged.dat"
+ npoints (int)= "-1"
+ outlevel (str)= "full"
+ postpone_cleanup (bool)= "True"
+ remove_noisy (bool)= "False"
+ remove_redundant (bool)= "False"
+ stop (str)= "rescaling"
+ sumname (str)= "summary.txt"
+ verbose (int)= "0"

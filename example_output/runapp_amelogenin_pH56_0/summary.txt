@@ -1,0 +1,227 @@
+#STATISTICAL MERGE: SUMMARY
+
+Ran with the following arguments:
+saxs_merge --aalpha=0.05 --auto --remove_redundant --remove_noisy --blimit_hessian=80 --elimit_hessian=80 --blimit_fitting=240 --elimit_fitting=240 /home/yannick/imp/saxsmerge_benchmark/input/amelogenin_pH56/3_pH56_lCaP_01C_S014_0_01.sub /home/yannick/imp/saxsmerge_benchmark/input/amelogenin_pH56/3_pH56_lCaP_01B_S012_0_01.sub /home/yannick/imp/saxsmerge_benchmark/input/amelogenin_pH56/3_pH56_lCaP_01D_S016_0_01.sub /home/yannick/imp/saxsmerge_benchmark/input/amelogenin_pH56/3_pH56_lCaP_01E_S018_0_01.sub --destdir=runapp_amelogenin_pH56_0 --allfiles --outlevel=full --berror --eerror
+
+Merge file
+  General
+   Filename: merged.dat
+   Number of points: 536
+   Data range: 0.01147 0.52225
+   300 points from profile 0 (/home/yannick/imp/saxsmerge_benchmark/input/amelogenin_pH56/3_pH56_lCaP_01B_S012_0_01.sub)
+   211 points from profile 1 (/home/yannick/imp/saxsmerge_benchmark/input/amelogenin_pH56/3_pH56_lCaP_01C_S014_0_01.sub)
+   14 points from profile 2 (/home/yannick/imp/saxsmerge_benchmark/input/amelogenin_pH56/3_pH56_lCaP_01D_S016_0_01.sub)
+   11 points from profile 3 (/home/yannick/imp/saxsmerge_benchmark/input/amelogenin_pH56/3_pH56_lCaP_01E_S018_0_01.sub)
+  Gaussian Process parameters
+   mean function : Generalized
+   G : 208.051650 +- 0.306127
+   Rg : 64.890594 +- 1.308047
+   d : 1.390471 +- 46.776154
+   A : 6.101122 +- 3.734183
+   sigma2 : 16.616242 +- 0.365422
+   tau : 0.517277 +- 3.888979
+   lambda : 0.034325 +- 46.364359
+  Calculated Values
+   Q1 : 0.022256
+   Q1.Rg : 1.444198
+   I(0) : 214.128153
+  Model Comparison : num_params -log10(Bayes Factor) -log(Posterior) -log(Likelihood) BIC AIC
+   Simple : 6	nan	nan	nan	nan	nan
+   Flat : 4	inf	234.536639	230.282693	-435.428850	-452.565387
+   Full : 8	inf	162.322796	164.338203	-278.403332	-312.676406
+   *Generalized : 7	68.106460	158.164910	159.385582	-274.782224	-304.771163
+  Model Comparison : best model
+   Name : Generalized
+   Number of parameters : 7
+   -log(Posterior) : 158.164910
+   -log(Likelihood) : 159.385582
+  Hessian matrix : G Rg d A sigma2 tau lambda
+   0.0937136039138 -0.392765462399 -10.6711931229 0.56529122591 0.00247878604569 0.0644208490849 2.38807678223
+   -0.392765462399 1.71098589897 47.812877655 -2.49341893196 0.00217993790284 -0.293552607298 -10.6842508316
+   -10.6711931229 47.812877655 2188.00854492 -147.474960327 0.217159509659 -49.5927429199 -566.992919922
+   0.56529122591 -2.49341893196 -147.474960327 13.9441232681 -0.0451256297529 1.40447759628 24.5177021027
+   0.00247878604569 0.00217993790284 0.217159509659 -0.0451256297529 0.133532941341 0.222139745951 0.449949085712
+   0.0644208490849 -0.293552607298 -49.5927429199 1.40447759628 0.222139745951 15.1241569519 -49.4355735779
+   2.38807678223 -10.6842508316 -566.992919922 24.5177021027 0.449949085712 -49.4355735779 2149.65380859
+
+Input file 0
+  General
+   Filename: /home/yannick/imp/saxsmerge_benchmark/input/amelogenin_pH56/3_pH56_lCaP_01B_S012_0_01.sub
+   Number of points: 560 
+   Data range: 0.00682 0.53063 
+  1. Cleanup
+   Number of significant points: 430 
+   Data range: 0.01147 0.41060 
+  2. GP parameters (values for non-rescaled curve)
+   mean function : Generalized
+   G : 36.421513 +- 1.349828
+   Rg : 66.228756 +- 0.972597
+   d : 1.403804 +- 48.330125
+   A : 1.243215 +- 23.998341
+   sigma2 : 14.756196 +- 0.340947
+   tau : 0.100132 +- 13.089463
+   lambda : 0.003406 +- 15.863609
+   Calculated Values
+    Q1 : 0.021910
+    Q1.Rg : 1.451105
+    I(0) : 212.548834
+   Hessian matrix : G Rg d A sigma2 tau lambda
+    1.82203543186 -1.28639793396 -45.3244476318 17.7305412292 -0.01180612389 0.730496585369 9.01897907257
+    -1.28639793396 0.945944726467 34.8336257935 -13.5066146851 0.00561323715374 -0.566309034824 -6.87291765213
+    -45.3244476318 34.8336257935 2335.80102539 -1049.75671387 -0.564489662647 -65.3453445435 -852.079345703
+    17.7305412292 -13.5066146851 -1049.75671387 575.920349121 0.184298306704 20.9787216187 284.52734375
+    -0.01180612389 0.00561323715374 -0.564489662647 0.184298306704 0.116245113313 2.35157418251 -20.7530231476
+    0.730496585369 -0.566309034824 -65.3453445435 20.9787216187 2.35157418251 171.334030151 2495.71240234
+    9.01897907257 -6.87291765213 -852.079345703 284.52734375 -20.7530231476 2495.71240234 251.654098511
+  3. Rescaling
+  normal model
+   gamma : 5.64317900312
+  4. Classification
+   Number of valid points: 300 
+   Data range: 0.01240 0.41060 
+
+Input file 1
+  General
+   Filename: /home/yannick/imp/saxsmerge_benchmark/input/amelogenin_pH56/3_pH56_lCaP_01C_S014_0_01.sub
+   Number of points: 565 
+   Data range: 0.00682 0.53248 
+  1. Cleanup
+   Number of significant points: 532 
+   Data range: 0.01147 0.50550 
+  2. GP parameters (values for non-rescaled curve)
+   mean function : Generalized
+   G : 80.920043 +- 0.982243
+   Rg : 58.666273 +- 1.736756
+   d : 1.449870 +- 56.624804
+   A : 2.201923 +- 12.475270
+   sigma2 : 20.200961 +- 0.280452
+   tau : 0.137031 +- 19.849275
+   lambda : 0.039864 +- 32.622562
+   Calculated Values
+    Q1 : 0.025137
+    Q1.Rg : 1.474722
+    I(0) : 224.463614
+   Hessian matrix : G Rg d A sigma2 tau lambda
+    0.964801847935 -1.65110754967 -32.3547973633 5.66018724442 -0.0247028563172 -5.26487541199 -8.37035942078
+    -1.65110754967 3.01632022858 64.9332504272 -10.9456586838 0.0465598963201 10.4467086792 15.3836803436
+    -32.3547973633 64.9332504272 3206.3684082 -596.611206055 1.53476655483 332.086273193 192.858917236
+    5.66018724442 -10.9456586838 -596.611206055 155.632369995 -0.382148355246 -26.4365825653 -25.8841152191
+    -0.0247028563172 0.0465598963201 1.53476655483 -0.382148355246 0.078653357923 1.76110816002 -1.0715764761
+    -5.26487541199 10.4467086792 332.086273193 -26.4365825653 1.76110816002 393.993713379 104.91229248
+    -8.37035942078 15.3836803436 192.858917236 -25.8841152191 -1.0715764761 104.91229248 1064.23156738
+  3. Rescaling
+  normal model
+   gamma : 2.7000119041
+  4. Classification
+   Number of valid points: 211 
+   Data range: 0.01147 0.50550 
+
+Input file 2
+  General
+   Filename: /home/yannick/imp/saxsmerge_benchmark/input/amelogenin_pH56/3_pH56_lCaP_01D_S016_0_01.sub
+   Number of points: 564 
+   Data range: 0.00682 0.53155 
+  1. Cleanup
+   Number of significant points: 540 
+   Data range: 0.01147 0.51295 
+  2. GP parameters (values for non-rescaled curve)
+   mean function : Generalized
+   G : 140.185173 +- 0.830021
+   Rg : 60.108587 +- 2.514764
+   d : 1.525076 +- 68.350994
+   A : 3.073965 +- 9.978941
+   sigma2 : 19.201578 +- 0.359680
+   tau : 0.148820 +- 16.743566
+   lambda : 0.067429 +- 19.011528
+   Calculated Values
+    Q1 : 0.025163
+    Q1.Rg : 1.512486
+    I(0) : 223.027433
+   Hessian matrix : G Rg d A sigma2 tau lambda
+    0.68893456459 -2.0102686882 -29.4565086365 3.33261322975 0.00236926297657 0.843188583851 2.9506354332
+    -2.0102686882 6.32403659821 109.866676331 -11.3813915253 -0.0340312831104 -3.02414727211 -11.0984830856
+    -29.4565086365 109.866676331 4671.85839844 -558.425720215 -0.921857655048 -436.749572754 -832.328796387
+    3.33261322975 -11.3813915253 -558.425720215 99.5792617798 -0.0444564819336 90.802230835 120.717643738
+    0.00236926297657 -0.0340312831104 -0.921857655048 -0.0444564819336 0.129369571805 0.625776350498 -0.45521903038
+    0.843188583851 -3.02414727211 -436.749572754 90.802230835 0.625776350498 280.347015381 34.1388092041
+    2.9506354332 -11.0984830856 -832.328796387 120.717643738 -0.45521903038 34.1388092041 361.438201904
+  3. Rescaling
+  normal model
+   gamma : 1.55728548923
+  4. Classification
+   Number of valid points: 14 
+   Data range: 0.05520 0.51295 
+
+Input file 3
+  General
+   Filename: /home/yannick/imp/saxsmerge_benchmark/input/amelogenin_pH56/3_pH56_lCaP_01E_S018_0_01.sub
+   Number of points: 563 
+   Data range: 0.00682 0.53155 
+  1. Cleanup
+   Number of significant points: 550 
+   Data range: 0.01147 0.52225 
+  2. GP parameters (values for non-rescaled curve)
+   mean function : Generalized
+   G : 216.636169 +- 0.598495
+   Rg : 62.474528 +- 2.691352
+   d : 1.565827 +- 63.125217
+   A : 3.983428 +- 6.256926
+   sigma2 : 22.722654 +- 0.314312
+   tau : 0.362399 +- 10.861151
+   lambda : 0.034214 +- 82.931306
+   Calculated Values
+    Q1 : 0.024531
+    Q1.Rg : 1.532560
+    I(0) : 220.870190
+   Hessian matrix : G Rg d A sigma2 tau lambda
+    0.358195841312 -1.52352535725 -16.3008575439 1.41216242313 0.0290422998369 -1.49692833424 -20.0151977539
+    -1.52352535725 7.24337434769 95.5296401978 -7.2158164978 -0.118051029742 9.00157928467 96.5251617432
+    -16.3008575439 95.5296401978 3984.79296875 -305.29977417 0.0792572647333 473.589385986 716.957458496
+    1.41216242313 -7.2158164978 -305.29977417 39.1491241455 0.0442191511393 -9.84005832672 -4.22005558014
+    0.0290422998369 -0.118051029742 0.0792572647333 0.0442191511393 0.0987922102213 0.786937236786 -7.61304712296
+    -1.49692833424 9.00157928467 473.589385986 -9.84005832672 0.786937236786 117.96459198 156.332015991
+    -20.0151977539 96.5251617432 716.957458496 -4.22005558014 -7.61304712296 156.332015991 6877.6015625
+  3. Rescaling
+  normal model
+   gamma : 1.0
+  4. Classification
+   Number of valid points: 11 
+   Data range: 0.03659 0.52225 
+
+List of all options used for the merge:
+ name (type) = "value"
+ Nreps (list)= "[10, 10, 10, 10]"
+ aalpha (float)= "0.05"
+ acutoff (float)= "0.1"
+ allfiles (bool)= "True"
+ auto (bool)= "True"
+ baverage (bool)= "False"
+ berror (bool)= "True"
+ blimit_fitting (int)= "240"
+ blimit_hessian (int)= "80"
+ bmean (str)= "Full"
+ bnocomp (bool)= "False"
+ cmodel (str)= "normal"
+ cnpoints (int)= "200"
+ creference (str)= "last"
+ dalpha (float)= "0.05"
+ destdir (str)= "runapp_amelogenin_pH56_0"
+ eaverage (bool)= "False"
+ eerror (bool)= "True"
+ eextrapolate (int)= "0"
+ elimit_fitting (int)= "240"
+ elimit_hessian (int)= "80"
+ emean (str)= "Full"
+ enocomp (bool)= "False"
+ enoextrapolate (bool)= "False"
+ filenames (list)= "['/home/yannick/imp/saxsmerge_benchmark/input/amelogenin_pH56/3_pH56_lCaP_01C_S014_0_01.sub', '/home/yannick/imp/saxsmerge_benchmark/input/amelogenin_pH56/3_pH56_lCaP_01B_S012_0_01.sub', '/home/yannick/imp/saxsmerge_benchmark/input/amelogenin_pH56/3_pH56_lCaP_01D_S016_0_01.sub', '/home/yannick/imp/saxsmerge_benchmark/input/amelogenin_pH56/3_pH56_lCaP_01E_S018_0_01.sub']"
+ header (bool)= "False"
+ mergename (str)= "merged.dat"
+ npoints (int)= "200"
+ outlevel (str)= "full"
+ postpone_cleanup (bool)= "False"
+ remove_noisy (bool)= "True"
+ remove_redundant (bool)= "True"
+ stop (str)= "merging"
+ sumname (str)= "summary.txt"
+ verbose (int)= "0"

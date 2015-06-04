@@ -1,0 +1,7 @@
+set term png 
+set output "Anhydrase_0_pdb_log.png"
+set log y
+set xrange [0:0.561593447704]
+set yrange [0.446297304101:128.216038208]
+p "compapp_Anhydrase_0/data_data_merged.dat" u 1:2:3 w yerr t "data", \
+  "compapp_Anhydrase_0/foxs.dat" u 1:2 w l t "FoXS chi=0.105651" lw 2

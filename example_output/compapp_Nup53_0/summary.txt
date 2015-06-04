@@ -1,0 +1,104 @@
+#STATISTICAL MERGE: SUMMARY
+
+Ran with the following arguments:
+saxs_merge --destdir=compapp_Nup53_0 --blimit_fitting=240 --elimit_fitting=240 --blimit_hessian=80 --elimit_hessian=80 --berror --eerror --cmodel=normal --bmean=Full --stop=rescaling --postpone_cleanup --npoints=-1 --allfiles --outlevel=full runapp_Nup53_0/data_merged.dat /home/yannick/imp/saxsmerge_benchmark/input/Nup53/25029_merged.dat
+
+Merge step skipped
+
+Input file 0
+  General
+   Filename: runapp_Nup53_0/data_merged.dat
+   Number of points: 498 
+   Data range: 0.01245 0.51001 
+  2. GP parameters (values for non-rescaled curve)
+   mean function : Generalized
+   G : 26.147969 +- 8.630517
+   Rg : 16.507438 +- 17.611874
+   d : 5.483240 +- 1.525985
+   A : 0.669347 +- 46.019681
+   sigma2 : 11.394246 +- 0.433043
+   tau : 0.100053 +- 34.004252
+   lambda : 0.004179 +- 335.450129
+   Calculated Values
+    Q1 : 0.173734
+    Q1.Rg : 2.867902
+    I(0) : 116.615421
+   Hessian matrix : G Rg d A sigma2 tau lambda
+    74.4858169556 -121.369194031 -0.671750605106 145.965393066 0.290191948414 -59.1332893372 -634.720092773
+    -121.369194031 310.178100586 6.40686178207 -412.181854248 -0.129001840949 108.498809814 791.995727539
+    -0.671750605106 6.40686178207 2.32863163948 -60.5895767212 -0.083863735199 0.643031418324 -54.7942733765
+    145.965393066 -412.181854248 -60.5895767212 2117.81103516 3.34197187424 193.788726807 4295.26269531
+    0.290191948414 -0.129001840949 -0.083863735199 3.34197187424 0.187526226044 6.95490980148 -70.8310928345
+    -59.1332893372 108.498809814 0.643031418324 193.788726807 6.95490980148 1156.28918457 -278.377624512
+    -634.720092773 791.995727539 -54.7942733765 4295.26269531 -70.8310928345 -278.377624512 112526.789062
+  3. Rescaling
+  normal model
+   gamma : 4.34839334531
+  Skipped further steps
+
+Input file 1
+  General
+   Filename: /home/yannick/imp/saxsmerge_benchmark/input/Nup53/25029_merged.dat
+   Number of points: 505 
+   Data range: 0.01803 0.48676 
+  2. GP parameters (values for non-rescaled curve)
+   mean function : Simple
+   G : 112.095971 +- 1.759312
+   Rg : 16.345396 +- 25.588022
+   A : 3.208506 +- 13.503117
+   sigma2 : 11.763907 +- 0.476171
+   tau : 0.128378 +- 17.979902
+   lambda : 0.047008 +- 32.805219
+   Calculated Values
+    Q1 : 0.495028
+    Q1.Rg : 8.091428
+    I(0) : 115.308823
+   Hessian matrix : G Rg A sigma2 tau lambda
+    3.09517836571 -33.6567306519 8.19609832764 0.00274405884556 2.76067781448 -12.0641565323
+    -33.6567306519 654.746887207 -172.488983154 -0.950731039047 40.3187713623 256.147003174
+    8.19609832764 -172.488983154 182.33416748 0.171191766858 3.84605622292 61.1729774475
+    0.00274405884556 -0.950731039047 0.171191766858 0.226738989353 0.684521973133 -2.00291275978
+    2.76067781448 40.3187713623 3.84605622292 0.684521973133 323.276885986 -257.112670898
+    -12.0641565323 256.147003174 61.1729774475 -2.00291275978 -257.112670898 1076.18237305
+  3. Rescaling
+  normal model
+   gamma : 1.0
+  Skipped further steps
+
+List of all options used for the merge:
+ name (type) = "value"
+ Nreps (list)= "[10, 10]"
+ aalpha (float)= "0.05"
+ acutoff (float)= "0.1"
+ allfiles (bool)= "True"
+ auto (bool)= "False"
+ baverage (bool)= "False"
+ berror (bool)= "True"
+ blimit_fitting (int)= "240"
+ blimit_hessian (int)= "80"
+ bmean (str)= "Full"
+ bnocomp (bool)= "False"
+ cmodel (str)= "normal"
+ cnpoints (int)= "200"
+ creference (str)= "last"
+ dalpha (float)= "0.05"
+ destdir (str)= "compapp_Nup53_0"
+ eaverage (bool)= "False"
+ eerror (bool)= "True"
+ eextrapolate (int)= "0"
+ elimit_fitting (int)= "240"
+ elimit_hessian (int)= "80"
+ emean (str)= "Full"
+ enocomp (bool)= "False"
+ enoextrapolate (bool)= "False"
+ filenames (list)= "['runapp_Nup53_0/data_merged.dat', '/home/yannick/imp/saxsmerge_benchmark/input/Nup53/25029_merged.dat']"
+ header (bool)= "False"
+ mergename (str)= "merged.dat"
+ npoints (int)= "-1"
+ outlevel (str)= "full"
+ postpone_cleanup (bool)= "True"
+ remove_noisy (bool)= "False"
+ remove_redundant (bool)= "False"
+ stop (str)= "rescaling"
+ sumname (str)= "summary.txt"
+ verbose (int)= "0"

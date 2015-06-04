@@ -1,0 +1,223 @@
+#STATISTICAL MERGE: SUMMARY
+
+Ran with the following arguments:
+saxs_merge --aalpha=0.05 --auto --remove_redundant --remove_noisy --blimit_hessian=80 --elimit_hessian=80 --blimit_fitting=240 --elimit_fitting=240 /home/yannick/imp/saxsmerge_benchmark/input/Ferritin/in1.dat /home/yannick/imp/saxsmerge_benchmark/input/Ferritin/in2.dat /home/yannick/imp/saxsmerge_benchmark/input/Ferritin/in3.dat /home/yannick/imp/saxsmerge_benchmark/input/Ferritin/in4.dat --destdir=runapp_Ferritin_0 --allfiles --outlevel=full --berror --eerror
+
+Merge file
+  General
+   Filename: merged.dat
+   Number of points: 514
+   Data range: 0.00603 0.29563
+   112 points from profile 0 (/home/yannick/imp/saxsmerge_benchmark/input/Ferritin/in4.dat)
+   138 points from profile 1 (/home/yannick/imp/saxsmerge_benchmark/input/Ferritin/in3.dat)
+   44 points from profile 2 (/home/yannick/imp/saxsmerge_benchmark/input/Ferritin/in2.dat)
+   220 points from profile 3 (/home/yannick/imp/saxsmerge_benchmark/input/Ferritin/in1.dat)
+  Gaussian Process parameters
+   mean function : Simple
+   G : 123.948293 +- 0.580783
+   Rg : 38.796908 +- 1.483007
+   A : 0.522550 +- 1.421378
+   sigma2 : 245.579539 +- 0.027833
+   tau : 1.634438 +- 2.523276
+   lambda : 0.026549 +- 609.015727
+  Calculated Values
+   Q1 : 0.300410
+   Q1.Rg : 11.654988
+   I(0) : 124.656213
+  Model Comparison : num_params -log10(Bayes Factor) -log(Posterior) -log(Likelihood) BIC AIC
+   *Simple : 6	-21.526562	-46.288259	-48.654413	134.762165	109.308825
+   Flat : 4	-10.702174	-16.690936	-23.109127	71.187148	54.218255
+   Full : 8	inf	375.616851	365.521331	-681.104875	-715.042661
+   Generalized : 7	-20.536980	-46.261729	-47.813469	139.322501	109.626938
+  Model Comparison : best model
+   Name : Simple
+   Number of parameters : 6
+   -log(Posterior) : -46.288259
+   -log(Likelihood) : -48.654413
+  Hessian matrix : G Rg A sigma2 tau lambda
+   0.337308377028 -0.0576624199748 0.353326350451 0.000688119151164 -0.444173306227 -13.7692098618
+   -0.0576624199748 2.1993086338 -0.627168118954 0.000374244787963 -0.142014577985 50.73878479 
+   0.353326350451 -0.627168118954 2.02031636238 0.0006751313922 -0.490439802408 -34.4300842285
+   0.000688119151164 0.000374244787963 0.0006751313922 0.000774702813942 0.00845644902438 -1.61431336403
+   -0.444173306227 -0.142014577985 -0.490439802408 0.00845644902438 6.3669219017 -1406.62963867
+   -13.7692098618 50.73878479  -34.4300842285 -1.61431336403 -1406.62963867 370900.15625
+
+Input file 0
+  General
+   Filename: /home/yannick/imp/saxsmerge_benchmark/input/Ferritin/in4.dat
+   Number of points: 691 
+   Data range: 0.00548 0.58427 
+  1. Cleanup
+   Number of significant points: 325 
+   Data range: 0.00603 0.18350 
+  2. GP parameters (values for non-rescaled curve)
+   mean function : Generalized
+   G : 123.673271 +- 0.582841
+   Rg : 38.887193 +- 1.484626
+   d : 7.999799 +- 0.812029
+   A : 0.870251 +- 1.257918
+   sigma2 : 221.171481 +- 0.024915
+   tau : 1.589668 +- 2.486818
+   lambda : 0.022809 +- 508.675885
+   Calculated Values
+    Q1 : 0.089080
+    Q1.Rg : 3.464058
+    I(0) : 124.931856
+   Hessian matrix : G Rg d A sigma2 tau lambda
+    0.339703261852 -0.179985404015 1.29037089209e-05 0.380943566561 0.00106562604196 -0.489287316799 -16.4711322784
+    -0.179985404015 2.20411467552 -0.199685543776 -0.817004680634 1.33245139295e-05 0.2593087852 29.951210022
+    1.29037089209e-05 -0.199685543776 0.659391760826 -0.0235983263701 0.000571317505091 0.191407814622 -79.628326416
+    0.380943566561 -0.817004680634 -0.0235983263701 1.58235776424 0.00100973795634 -0.546973526478 -47.6940536499
+    0.00106562604196 1.33245139295e-05 0.000571317505091 0.00100973795634 0.00062075688038 0.0075581590645 -1.3247102499
+    -0.489287316799 0.2593087852 0.191407814622 -0.546973526478 0.0075581590645 6.18426132202 -1004.27862549
+    -16.4711322784 29.951210022 -79.628326416 -47.6940536499 -1.3247102499 -1004.27862549 258751.15625
+  3. Rescaling
+  normal model
+   gamma : 1.0
+  4. Classification
+   Number of valid points: 112 
+   Data range: 0.00603 0.17693 
+
+Input file 1
+  General
+   Filename: /home/yannick/imp/saxsmerge_benchmark/input/Ferritin/in3.dat
+   Number of points: 759 
+   Data range: 0.00548 0.58589 
+  1. Cleanup
+   Number of significant points: 400 
+   Data range: 0.00658 0.22728 
+  2. GP parameters (values for non-rescaled curve)
+   mean function : Generalized
+   G : 240.809312 +- 0.175731
+   Rg : 37.645788 +- 1.139250
+   d : 7.999687 +- 0.548173
+   A : 0.959477 +- 0.343133
+   sigma2 : 237.305861 +- 0.027106
+   tau : 5.609681 +- 0.648771
+   lambda : 0.033516 +- 318.743125
+   Calculated Values
+    Q1 : 0.092017
+    Q1.Rg : 3.464034
+    I(0) : 124.317504
+   Hessian matrix : G Rg d A sigma2 tau lambda
+    0.0308813713491 0.0295147709548 -0.00428455602378 0.0290605481714 0.000148305713083 -0.0183280538768 3.92881512642
+    0.0295147709548 1.29789030552 -0.115300104022 -0.0759538784623 -0.00172363873571 0.250783383846 80.1641082764
+    -0.00428455602378 -0.115300104022 0.300493121147 -0.00427145324647 0.00165052770171 -0.0846011117101 88.7064819336
+    0.0290605481714 -0.0759538784623 -0.00427145324647 0.117739997804 0.000185953773325 -0.0328548438847 -12.4343729019
+    0.000148305713083 -0.00172363873571 0.00165052770171 0.000185953773325 0.000734723114874 0.00302871130407 -1.92380166054
+    -0.0183280538768 0.250783383846 -0.0846011117101 -0.0328548438847 0.00302871130407 0.420903623104 -216.490203857
+    3.92881512642 80.1641082764 88.7064819336 -12.4343729019 -1.92380166054 -216.490203857 101597.179688
+  3. Rescaling
+  normal model
+   gamma : 0.513933572835
+  4. Classification
+   Number of valid points: 138 
+   Data range: 0.02027 0.22345 
+
+Input file 2
+  General
+   Filename: /home/yannick/imp/saxsmerge_benchmark/input/Ferritin/in2.dat
+   Number of points: 844 
+   Data range: 0.00548 0.58589 
+  1. Cleanup
+   Number of significant points: 510 
+   Data range: 0.00658 0.28579 
+  2. GP parameters (values for non-rescaled curve)
+   mean function : Generalized
+   G : 442.337615 +- 0.217644
+   Rg : 38.853177 +- 2.033217
+   d : 6.418926 +- 2.066420
+   A : 1.578152 +- 0.551000
+   sigma2 : 267.736467 +- 0.021519
+   tau : 4.316603 +- 0.895548
+   lambda : 0.023861 +- 381.939499
+   Calculated Values
+    Q1 : 0.079864
+    Q1.Rg : 3.102965
+    I(0) : 124.002628
+   Hessian matrix : G Rg d A sigma2 tau lambda
+    0.0473690629005 -0.0673995986581 -0.00428795954213 0.0520980879664 0.000225454539759 -0.0701447352767 -4.27222299576
+    -0.0673995986581 4.13397312164 -1.08418059349 -0.374513238668 -0.000242404843448 -0.37724506855 100.016304016
+    -0.00428795954213 -1.08418059349 4.27009344101 -0.0382456555963 0.00477884383872 0.172333717346 -301.643249512
+    0.0520980879664 -0.374513238668 -0.0382456555963 0.30360108614 0.00019501693896 -0.0668272003531 -10.2497005463
+    0.000225454539759 -0.000242404843448 0.00477884383872 0.00019501693896 0.000463057978777 0.00376022187993 -3.68307042122
+    -0.0701447352767 -0.37724506855 0.172333717346 -0.0668272003531 0.00376022187993 0.802007079124 -310.734039307
+    -4.27222299576 100.016304016 -301.643249512 -10.2497005463 -3.68307042122 -310.734039307 145877.78125
+  3. Rescaling
+  normal model
+   gamma : 0.278661524256
+  4. Classification
+   Number of valid points: 44 
+   Data range: 0.01425 0.20046 
+
+Input file 3
+  General
+   Filename: /home/yannick/imp/saxsmerge_benchmark/input/Ferritin/in1.dat
+   Number of points: 863 
+   Data range: 0.00548 0.58535 
+  1. Cleanup
+   Number of significant points: 525 
+   Data range: 0.00712 0.29563 
+  2. GP parameters (values for non-rescaled curve)
+   mean function : Simple
+   G : 668.483678 +- 0.195462
+   Rg : 38.815581 +- 2.630693
+   A : 2.540622 +- 0.514231
+   sigma2 : 254.491369 +- 0.028706
+   tau : 4.801694 +- 1.165622
+   lambda : 0.022562 +- 741.250717
+   Calculated Values
+    Q1 : 0.300450
+    Q1.Rg : 11.662145
+    I(0) : 124.192153
+   Hessian matrix : G Rg A sigma2 tau lambda
+    0.038205422461 -0.10803168267 0.0428624264896 0.000223201495828 -0.0417486578226 -12.0094671249
+    -0.10803168267 6.920545578  -0.490187138319 0.000614811840933 -0.187146544456 -137.52961731
+    0.0428624264896 -0.490187138319 0.264433473349 0.000187477184227 -0.0464762449265 -12.077208519
+    0.000223201495828 0.000614811840933 0.000187477184227 0.000824024667963 0.00133072060999 -0.135382831097
+    -0.0417486578226 -0.187146544456 -0.0464762449265 0.00133072060999 1.35867416859 -665.072998047
+    -12.0094671249 -137.52961731 -12.077208519 -0.135382831097 -665.072998047 549452.625  
+  3. Rescaling
+  normal model
+   gamma : 0.184493369545
+  4. Classification
+   Number of valid points: 220 
+   Data range: 0.00712 0.29563 
+
+List of all options used for the merge:
+ name (type) = "value"
+ Nreps (list)= "[10, 10, 10, 10]"
+ aalpha (float)= "0.05"
+ acutoff (float)= "0.1"
+ allfiles (bool)= "True"
+ auto (bool)= "True"
+ baverage (bool)= "False"
+ berror (bool)= "True"
+ blimit_fitting (int)= "240"
+ blimit_hessian (int)= "80"
+ bmean (str)= "Full"
+ bnocomp (bool)= "False"
+ cmodel (str)= "normal"
+ cnpoints (int)= "200"
+ creference (str)= "last"
+ dalpha (float)= "0.05"
+ destdir (str)= "runapp_Ferritin_0"
+ eaverage (bool)= "False"
+ eerror (bool)= "True"
+ eextrapolate (int)= "0"
+ elimit_fitting (int)= "240"
+ elimit_hessian (int)= "80"
+ emean (str)= "Full"
+ enocomp (bool)= "False"
+ enoextrapolate (bool)= "False"
+ filenames (list)= "['/home/yannick/imp/saxsmerge_benchmark/input/Ferritin/in1.dat', '/home/yannick/imp/saxsmerge_benchmark/input/Ferritin/in2.dat', '/home/yannick/imp/saxsmerge_benchmark/input/Ferritin/in3.dat', '/home/yannick/imp/saxsmerge_benchmark/input/Ferritin/in4.dat']"
+ header (bool)= "False"
+ mergename (str)= "merged.dat"
+ npoints (int)= "200"
+ outlevel (str)= "full"
+ postpone_cleanup (bool)= "False"
+ remove_noisy (bool)= "True"
+ remove_redundant (bool)= "True"
+ stop (str)= "merging"
+ sumname (str)= "summary.txt"
+ verbose (int)= "0"

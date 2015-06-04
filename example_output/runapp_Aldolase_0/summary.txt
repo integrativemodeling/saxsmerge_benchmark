@@ -1,0 +1,223 @@
+#STATISTICAL MERGE: SUMMARY
+
+Ran with the following arguments:
+saxs_merge --aalpha=0.05 --auto --remove_redundant --remove_noisy --blimit_hessian=80 --elimit_hessian=80 --blimit_fitting=240 --elimit_fitting=240 /home/yannick/imp/saxsmerge_benchmark/input/Aldolase/in1.dat /home/yannick/imp/saxsmerge_benchmark/input/Aldolase/in2.dat /home/yannick/imp/saxsmerge_benchmark/input/Aldolase/in3.dat /home/yannick/imp/saxsmerge_benchmark/input/Aldolase/in4.dat --destdir=runapp_Aldolase_0 --allfiles --outlevel=full --berror --eerror
+
+Merge file
+  General
+   Filename: merged.dat
+   Number of points: 420
+   Data range: 0.00603 0.23876
+   174 points from profile 0 (/home/yannick/imp/saxsmerge_benchmark/input/Aldolase/in4.dat)
+   36 points from profile 1 (/home/yannick/imp/saxsmerge_benchmark/input/Aldolase/in3.dat)
+   100 points from profile 2 (/home/yannick/imp/saxsmerge_benchmark/input/Aldolase/in2.dat)
+   110 points from profile 3 (/home/yannick/imp/saxsmerge_benchmark/input/Aldolase/in1.dat)
+  Gaussian Process parameters
+   mean function : Generalized
+   G : 120.188595 +- 0.926349
+   Rg : 36.825207 +- 2.536851
+   d : 5.718999 +- 0.937331
+   A : 0.598609 +- 2.431581
+   sigma2 : 225.502775 +- 0.029444
+   tau : 0.965457 +- 2.524002
+   lambda : 0.019533 +- 312.494437
+  Calculated Values
+   Q1 : 0.079535
+   Q1.Rg : 2.928907
+   I(0) : 121.358681
+  Model Comparison : num_params -log10(Bayes Factor) -log(Posterior) -log(Likelihood) BIC AIC
+   Simple : 6	6.889728	18.568165	16.746295	2.748938	-21.492590
+   Flat : 4	12.855759	36.898473	30.437796	-36.714573	-52.875591
+   Full : 8	15.807261	46.529544	42.695293	-37.068549	-69.390587
+   *Generalized : 7	6.704513	17.838707	16.391161	9.499461	-18.782322
+  Model Comparison : best model
+   Name : Generalized
+   Number of parameters : 7
+   -log(Posterior) : 17.838707
+   -log(Likelihood) : 16.391161
+  Hessian matrix : G Rg d A sigma2 tau lambda
+   0.858122766018 -0.893046736717 -0.00506643252447 1.0631519556 0.00268360460177 -2.25200223923 41.6804046631
+   -0.893046736717 6.43561315536 -0.214526951313 -2.95414304733 0.00148101337254 -1.15756344795 99.2723312378
+   -0.00506643252447 -0.214526951313 0.878589272499 -0.526165306568 -0.000799120170996 -0.165309220552 -23.5557403564
+   1.0631519556 -2.95414304733 -0.526165306568 5.91258764267 0.00201544887386 -2.03725862503 11.3172512054
+   0.00268360460177 0.00148101337254 -0.000799120170996 0.00201544887386 0.000866971618962 0.0303916074336 -4.45469903946
+   -2.25200223923 -1.15756344795 -0.165309220552 -2.03725862503 0.0303916074336 6.37058639526 -417.33807373
+   41.6804046631 99.2723312378 -23.5557403564 11.3172512054 -4.45469903946 -417.33807373 97652.7734375
+
+Input file 0
+  General
+   Filename: /home/yannick/imp/saxsmerge_benchmark/input/Aldolase/in4.dat
+   Number of points: 785 
+   Data range: 0.00548 0.58535 
+  1. Cleanup
+   Number of significant points: 290 
+   Data range: 0.00603 0.16488 
+  2. GP parameters (values for non-rescaled curve)
+   mean function : Generalized
+   G : 118.757499 +- 1.390573
+   Rg : 36.750358 +- 4.283743
+   d : 5.870750 +- 0.871936
+   A : 0.932890 +- 3.599688
+   sigma2 : 218.828432 +- 0.033204
+   tau : 0.626755 +- 3.995736
+   lambda : 0.013372 +- 346.188589
+   Calculated Values
+    Q1 : 0.080748
+    Q1.Rg : 2.967512
+    I(0) : 120.490250
+   Hessian matrix : G Rg d A sigma2 tau lambda
+    1.93369352818 -3.41796994209 -0.0169073976576 2.77262306213 0.00324907153845 -3.52466917038 -6.55939102173
+    -3.41796994209 18.3504543304 0.223989248276 -10.0644741058 0.00127382704522 -1.12517917156 -2.09907698631
+    -0.0169073976576 0.223989248276 0.760272324085 -1.4479995966 0.00225761649199 0.417622238398 -127.914428711
+    2.77262306213 -10.0644741058 -1.4479995966 12.9577560425 0.00199760938995 -0.892089426517 37.1266670227
+    0.00324907153845 0.00127382704522 0.00225761649199 0.00199760938995 0.00110253249295 0.0159981511533 -0.580563664436
+    -3.52466917038 -1.12517917156 0.417622238398 -0.892089426517 0.0159981511533 15.9659061432 -911.918151855
+    -6.55939102173 -2.09907698631 -127.914428711 37.1266670227 -0.580563664436 -911.918151855 119846.539062
+  3. Rescaling
+  normal model
+   gamma : 1.0
+  4. Classification
+   Number of valid points: 174 
+   Data range: 0.00658 0.15941 
+
+Input file 1
+  General
+   Filename: /home/yannick/imp/saxsmerge_benchmark/input/Aldolase/in3.dat
+   Number of points: 904 
+   Data range: 0.00548 0.58589 
+  1. Cleanup
+   Number of significant points: 329 
+   Data range: 0.00603 0.18569 
+  2. GP parameters (values for non-rescaled curve)
+   mean function : Generalized
+   G : 255.204540 +- 0.151114
+   Rg : 38.456611 +- 0.818406
+   d : 6.323920 +- 0.795165
+   A : 1.926653 +- 0.358397
+   sigma2 : 288.918130 +- 0.021954
+   tau : 6.686900 +- 0.356523
+   lambda : 0.014878 +- 626.806365
+   Calculated Values
+    Q1 : 0.080088
+    Q1.Rg : 3.079916
+    I(0) : 131.405957
+   Hessian matrix : G Rg d A sigma2 tau lambda
+    0.0228355713189 -0.0503238774836 -0.000254862825386 0.0287881512195 0.000268155446975 -0.0611332468688 -4.31583786011
+    -0.0503238774836 0.669787585735 -0.185360103846 -0.157441884279 -8.46304319566e-05 0.0105776954442 41.097026825
+    -0.000254862825386 -0.185360103846 0.632286965847 -0.0172876901925 0.000354105926817 -0.00285669625737 5.68247890472
+    0.0287881512195 -0.157441884279 -0.0172876901925 0.128448233008 0.000270668882877 -0.0555148646235 -2.4018163681
+    0.000268155446975 -8.46304319566e-05 0.000354105926817 0.000270668882877 0.000481977971504 0.00163681688718 -1.75546681881
+    -0.0611332468688 0.0105776954442 -0.00285669625737 -0.0555148646235 0.00163681688718 0.127108797431 -213.432281494
+    -4.31583786011 41.097026825 5.68247890472 -2.4018163681 -1.75546681881 -213.432281494 392886.21875
+  3. Rescaling
+  normal model
+   gamma : 0.501843349953
+  4. Classification
+   Number of valid points: 36 
+   Data range: 0.01753 0.18295 
+
+Input file 2
+  General
+   Filename: /home/yannick/imp/saxsmerge_benchmark/input/Aldolase/in2.dat
+   Number of points: 947 
+   Data range: 0.00548 0.58372 
+  1. Cleanup
+   Number of significant points: 425 
+   Data range: 0.00603 0.23876 
+  2. GP parameters (values for non-rescaled curve)
+   mean function : Simple
+   G : 375.197042 +- 0.515989
+   Rg : 36.568656 +- 4.886111
+   A : 1.856173 +- 1.207179
+   sigma2 : 271.453778 +- 0.026335
+   tau : 1.627515 +- 1.870959
+   lambda : 0.029543 +- 215.254954
+   Calculated Values
+    Q1 : 0.243414
+    Q1.Rg : 8.901338
+    I(0) : 119.887994
+   Hessian matrix : G Rg A sigma2 tau lambda
+    0.266245156527 -0.368265539408 0.28369051218 0.00121304951608 -0.112748265266 24.7243270874
+    -0.368265539408 23.8740825653 -2.09657883644 0.0020457895007 2.70086479187 161.36177063
+    0.28369051218 -2.09657883644 1.45728063583 0.00094816199271 -0.107375629246 32.7678222656
+    0.00121304951608 0.0020457895007 0.00094816199271 0.000693532289006 0.00721109285951 -1.02341902256
+    -0.112748265266 2.70086479187 -0.107375629246 0.00721109285951 3.50048756599 -198.266616821
+    24.7243270874 161.36177063 32.7678222656 -1.02341902256 -198.266616821 46334.6953125
+  3. Rescaling
+  normal model
+   gamma : 0.317947031978
+  4. Classification
+   Number of valid points: 100 
+   Data range: 0.00603 0.23876 
+
+Input file 3
+  General
+   Filename: /home/yannick/imp/saxsmerge_benchmark/input/Aldolase/in1.dat
+   Number of points: 999 
+   Data range: 0.00548 0.58481 
+  1. Cleanup
+   Number of significant points: 383 
+   Data range: 0.00658 0.21579 
+  2. GP parameters (values for non-rescaled curve)
+   mean function : Simple
+   G : 467.406749 +- 0.391103
+   Rg : 36.804986 +- 4.293978
+   A : 2.519593 +- 0.906266
+   sigma2 : 258.670179 +- 0.024848
+   tau : 2.221162 +- 1.781116
+   lambda : 0.025420 +- 453.641637
+   Calculated Values
+    Q1 : 0.216422
+    Q1.Rg : 7.965398
+    I(0) : 120.636235
+   Hessian matrix : G Rg A sigma2 tau lambda
+    0.152961179614 -0.367108166218 0.171949088573 0.00077404838521 -0.116570495069 15.2121353149
+    -0.367108166218 18.4382476807 -1.61436676979 0.00197424483486 -0.0401445142925 219.476333618
+    0.171949088573 -1.61436676979 0.821318089962 0.000389678491047 -0.0134123694152 22.1251049042
+    0.00077404838521 0.00197424483486 0.000389678491047 0.000617403071374 0.00619338173419 -1.44325232506
+    -0.116570495069 -0.0401445142925 -0.0134123694152 0.00619338173419 3.1723742485 -531.502319336
+    15.2121353149 219.476333618 22.1251049042 -1.44325232506 -531.502319336 205790.734375
+  3. Rescaling
+  normal model
+   gamma : 0.256598699455
+  4. Classification
+   Number of valid points: 110 
+   Data range: 0.04055 0.20375 
+
+List of all options used for the merge:
+ name (type) = "value"
+ Nreps (list)= "[10, 10, 10, 10]"
+ aalpha (float)= "0.05"
+ acutoff (float)= "0.1"
+ allfiles (bool)= "True"
+ auto (bool)= "True"
+ baverage (bool)= "False"
+ berror (bool)= "True"
+ blimit_fitting (int)= "240"
+ blimit_hessian (int)= "80"
+ bmean (str)= "Full"
+ bnocomp (bool)= "False"
+ cmodel (str)= "normal"
+ cnpoints (int)= "200"
+ creference (str)= "last"
+ dalpha (float)= "0.05"
+ destdir (str)= "runapp_Aldolase_0"
+ eaverage (bool)= "False"
+ eerror (bool)= "True"
+ eextrapolate (int)= "0"
+ elimit_fitting (int)= "240"
+ elimit_hessian (int)= "80"
+ emean (str)= "Full"
+ enocomp (bool)= "False"
+ enoextrapolate (bool)= "False"
+ filenames (list)= "['/home/yannick/imp/saxsmerge_benchmark/input/Aldolase/in1.dat', '/home/yannick/imp/saxsmerge_benchmark/input/Aldolase/in2.dat', '/home/yannick/imp/saxsmerge_benchmark/input/Aldolase/in3.dat', '/home/yannick/imp/saxsmerge_benchmark/input/Aldolase/in4.dat']"
+ header (bool)= "False"
+ mergename (str)= "merged.dat"
+ npoints (int)= "200"
+ outlevel (str)= "full"
+ postpone_cleanup (bool)= "False"
+ remove_noisy (bool)= "True"
+ remove_redundant (bool)= "True"
+ stop (str)= "merging"
+ sumname (str)= "summary.txt"
+ verbose (int)= "0"

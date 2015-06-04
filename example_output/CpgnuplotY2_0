@@ -1,0 +1,16 @@
+set term png 
+set output "Y2_0_inputs_log_overlaid.png"
+set xrange [0:4.335892]
+set log y
+p "runapp_Y2_0/data_in1.dat" u 1:($4==1?$2:1/0):3 w yerr t "in1.dat", \
+   "runapp_Y2_0/mean_in1.dat" u 1:2 w l lt 2 not, \
+   "runapp_Y2_0/mean_in1.dat" u 1:($2+$3) w l lt 2 not, \
+   "runapp_Y2_0/mean_in1.dat" u 1:($2-$3) w l lt 2 not, \
+"runapp_Y2_0/data_in2.dat" u 1:($4==1?$2:1/0):3 w yerr t "in2.dat", \
+   "runapp_Y2_0/mean_in2.dat" u 1:2 w l lt 3 not, \
+   "runapp_Y2_0/mean_in2.dat" u 1:($2+$3) w l lt 3 not, \
+   "runapp_Y2_0/mean_in2.dat" u 1:($2-$3) w l lt 3 not, \
+"runapp_Y2_0/data_in3.dat" u 1:($4==1?$2:1/0):3 w yerr t "in3.dat", \
+   "runapp_Y2_0/mean_in3.dat" u 1:2 w l lt 4 not, \
+   "runapp_Y2_0/mean_in3.dat" u 1:($2+$3) w l lt 4 not, \
+   "runapp_Y2_0/mean_in3.dat" u 1:($2-$3) w l lt 4 not

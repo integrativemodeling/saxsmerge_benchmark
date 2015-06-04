@@ -1,0 +1,7 @@
+set term png 
+set output "mo_lair1s_0_pdb_log.png"
+set log y
+set xrange [0:0.4643256]
+set yrange [0.519909333309:135.437884686]
+p "compapp_mo_lair1s_0/data_data_merged.dat" u 1:2:3 w yerr t "data", \
+  "compapp_mo_lair1s_0/foxs.dat" u 1:2 w l t "FoXS chi=0.596554" lw 2

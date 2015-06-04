@@ -1,0 +1,190 @@
+#STATISTICAL MERGE: SUMMARY
+
+Ran with the following arguments:
+saxs_merge --aalpha=0.05 --auto --remove_redundant --remove_noisy --blimit_hessian=80 --elimit_hessian=80 --blimit_fitting=240 --elimit_fitting=240 /home/yannick/imp/saxsmerge_benchmark/input/Y1/in1.dat /home/yannick/imp/saxsmerge_benchmark/input/Y1/in2.dat /home/yannick/imp/saxsmerge_benchmark/input/Y1/in3.dat --destdir=runapp_Y1_0 --allfiles --outlevel=full --berror --eerror
+
+Merge file
+  General
+   Filename: merged.dat
+   Number of points: 2068
+   Data range: 0.11294 4.85495
+   417 points from profile 0 (/home/yannick/imp/saxsmerge_benchmark/input/Y1/in1.dat)
+   992 points from profile 1 (/home/yannick/imp/saxsmerge_benchmark/input/Y1/in2.dat)
+   659 points from profile 2 (/home/yannick/imp/saxsmerge_benchmark/input/Y1/in3.dat)
+  Gaussian Process parameters
+   mean function : Simple
+   G : 134.659087 +- 0.033097
+   Rg : 1.644932 +- 2.341462
+   A : -1.468810 +- 0.069412
+   sigma2 : 25.253551 +- 0.272767
+   tau : 30.661649 +- 0.148250
+   lambda : 0.571866 +- 25.905556
+  Calculated Values
+   Q1 : 10.885095
+   Q1.Rg : 17.905247
+   I(0) : 131.055300
+  Model Comparison : num_params -log10(Bayes Factor) -log(Posterior) -log(Likelihood) BIC AIC
+   *Simple : 6	24.933920	69.981605	63.888476	-81.970929	-115.776953
+   Flat : 4	26.310271	69.543029	62.216037	-93.894725	-116.432074
+   Full : 8	inf	39.734742	36.811877	-12.549057	-57.623755
+   Generalized : 7	25.430705	70.824110	65.256277	-77.072193	-116.512553
+  Model Comparison : best model
+   Name : Simple
+   Number of parameters : 6
+   -log(Posterior) : 69.981605
+   -log(Likelihood) : 63.888476
+  Hessian matrix : G Rg A sigma2 tau lambda
+   0.00109543313738 -0.0193298589438 0.00120307633188 0.000120210199384 -0.000809498829767 -0.132001027465
+   -0.0193298589438 5.48244285583 -0.0588092617691 -0.00434409361333 0.056174647063 25.5926704407
+   0.00120307633188 -0.0588092617691 0.00481801573187 9.28907466005e-05 -0.000824880145956 -0.295439511538
+   0.000120210199384 -0.00434409361333 9.28907466005e-05 0.0744019821286 0.00223755626939 -0.612268388271
+   -0.000809498829767 0.056174647063 -0.000824880145956 0.00223755626939 0.0219781547785 -3.18715381622
+   -0.132001027465 25.5926704407 -0.295439511538 -0.612268388271 -3.18715381622 671.097839355
+
+Input file 0
+  General
+   Filename: /home/yannick/imp/saxsmerge_benchmark/input/Y1/in1.dat
+   Number of points: 2087 
+   Data range: 0.07413 4.85723 
+  1. Cleanup
+   Number of significant points: 886 
+   Data range: 0.11751 2.14034 
+  2. GP parameters (values for non-rescaled curve)
+   mean function : Simple
+   G : 162.688428 +- 0.027491
+   Rg : 2.022012 +- 1.746493
+   A : -7.617120 +- 0.047087
+   sigma2 : 22.569957 +- 0.211759
+   tau : 36.660077 +- 0.094312
+   lambda : 0.451125 +- 18.542669
+   Calculated Values
+    Q1 : 4.149678
+    Q1.Rg : 8.390700
+    I(0) : 136.810885
+   Hessian matrix : G Rg A sigma2 tau lambda
+    0.000755763263442 -0.0115280468017 0.000832864840049 0.000248285243288 -0.000563902431168 -0.0800630152225
+    -0.0115280468017 3.05023622513 -0.039582837373 -0.0164270065725 0.0432624258101 16.2155399323
+    0.000832864840049 -0.039582837373 0.00221722596325 0.000218380693696 -0.000451790139778 -0.217424958944
+    0.000248285243288 -0.0164270065725 0.000218380693696 0.0448420718312 0.00230436306447 -0.46088090539
+    -0.000563902431168 0.0432624258101 -0.000451790139778 0.00230436306447 0.00889484304935 -1.50890576839
+    -0.0800630152225 16.2155399323 -0.217424958944 -0.46088090539 -1.50890576839 343.830566406
+  3. Rescaling
+  normal model
+   gamma : 0.892739731573
+  4. Classification
+   Number of valid points: 417 
+   Data range: 0.11979 2.14034 
+
+Input file 1
+  General
+   Filename: /home/yannick/imp/saxsmerge_benchmark/input/Y1/in2.dat
+   Number of points: 2093 
+   Data range: 0.07413 4.85266 
+  1. Cleanup
+   Number of significant points: 2053 
+   Data range: 0.11294 4.80015 
+  2. GP parameters (values for non-rescaled curve)
+   mean function : Full
+   G : 56.393368 +- 5.710478
+   Rg : 2.058686 +- 149.883197
+   d : 3.281565 +- 12.295134
+   s : 0.417503 +- 310.452782
+   A : 0.963293 +- 18.175495
+   sigma2 : 27.526430 +- 0.199342
+   tau : 0.178134 +- 23.471538
+   lambda : 0.127094 +- 25.905798
+   Calculated Values
+    Q1 : 0.934127
+    Q1.Rg : 1.923074
+    I(0) : inf
+   Hessian matrix : G Rg d s A sigma2 tau lambda
+    32.6095581055 -638.24810791 -6.99319267273 1451.32995605 39.9691886902 0.0629045963287 -17.6275749207 -10.6902332306
+    -638.24810791 22464.9726562 569.344787598 -11890.2773438 -1429.38562012 0.0372123196721 141.825027466 -223.114334106
+    -6.99319267273 569.344787598 151.170318604 207.267074585 -160.312103271 -0.0689441040158 0.323024123907 3.34453845024
+    1451.32995605 -11890.2773438 207.267074585 96380.9296875 852.061767578 4.15512084961 -268.980895996 -1023.39208984
+    39.9691886902 -1429.38562012 -160.312103271 852.061767578 330.348602295 0.0890349596739 40.7839012146 37.3385848999
+    0.0629045963287 0.0372123196721 -0.0689441040158 4.15512084961 0.0890349596739 0.039737418294 1.70277667046 -0.907510042191
+    -17.6275749207 141.825027466 0.323024123907 -268.980895996 40.7839012146 1.70277667046 550.913085938 -0.203491449356
+    -10.6902332306 -223.114334106 3.34453845024 -1023.39208984 37.3385848999 -0.907510042191 -0.203491449356 671.110351562
+  3. Rescaling
+  normal model
+   gamma : 0.835629168239
+  4. Classification
+   Number of valid points: 992 
+   Data range: 0.11522 4.80015 
+
+Input file 2
+  General
+   Filename: /home/yannick/imp/saxsmerge_benchmark/input/Y1/in3.dat
+   Number of points: 2095 
+   Data range: 0.07413 4.85723 
+  1. Cleanup
+   Number of significant points: 2077 
+   Data range: 0.11294 4.85495 
+  2. GP parameters (values for non-rescaled curve)
+   mean function : Full
+   G : 54.997896 +- 1.441122
+   Rg : 2.449564 +- 20.564799
+   d : 7.370691 +- 1.067140
+   s : 0.335592 +- 182.231695
+   A : 1.733655 +- 1.676368
+   sigma2 : 35.112554 +- 0.171003
+   tau : 1.245620 +- 3.969547
+   lambda : 0.535901 +- 22.875089
+   Calculated Values
+    Q1 : 1.249775
+    Q1.Rg : 3.061403
+    I(0) : inf
+   Hessian matrix : G Rg d s A sigma2 tau lambda
+    2.0768327713 11.2957363129 0.0194346196949 235.498565674 0.837788760662 -0.00199922197498 -0.725599944592 3.16156244278
+    11.2957363129 422.910949707 -2.76876711845 2172.05688477 -5.39542341232 0.149217128754 -43.8808059692 -76.5342483521
+    0.0194346196949 -2.76876711845 1.13878703117 -0.498885065317 -0.0121229365468 0.0116251185536 0.444468617439 -5.3563542366
+    235.498565674 2172.05688477 -0.498885065317 33208.390625 67.4754180908 -1.84376335144 -59.0829391479 -646.165222168
+    0.837788760662 -5.39542341232 -0.0121229365468 67.4754180908 2.81020855904 0.00178710662294 0.0484058782458 2.37629032135
+    -0.00199922197498 0.149217128754 0.0116251185536 -1.84376335144 0.00178710662294 0.0292421858758 0.0158895906061 -0.283222436905
+    -0.725599944592 -43.8808059692 0.444468617439 -59.0829391479 0.0484058782458 0.0158895906061 15.7573051453 -52.6118774414
+    3.16156244278 -76.5342483521 -5.3563542366 -646.165222168 2.37629032135 -0.283222436905 -52.6118774414 523.269714355
+  3. Rescaling
+  normal model
+   gamma : 1.0
+  4. Classification
+   Number of valid points: 659 
+   Data range: 0.11294 4.85495 
+
+List of all options used for the merge:
+ name (type) = "value"
+ Nreps (list)= "[10, 10, 10]"
+ aalpha (float)= "0.05"
+ acutoff (float)= "0.1"
+ allfiles (bool)= "True"
+ auto (bool)= "True"
+ baverage (bool)= "False"
+ berror (bool)= "True"
+ blimit_fitting (int)= "240"
+ blimit_hessian (int)= "80"
+ bmean (str)= "Full"
+ bnocomp (bool)= "False"
+ cmodel (str)= "normal"
+ cnpoints (int)= "200"
+ creference (str)= "last"
+ dalpha (float)= "0.05"
+ destdir (str)= "runapp_Y1_0"
+ eaverage (bool)= "False"
+ eerror (bool)= "True"
+ eextrapolate (int)= "0"
+ elimit_fitting (int)= "240"
+ elimit_hessian (int)= "80"
+ emean (str)= "Full"
+ enocomp (bool)= "False"
+ enoextrapolate (bool)= "False"
+ filenames (list)= "['/home/yannick/imp/saxsmerge_benchmark/input/Y1/in1.dat', '/home/yannick/imp/saxsmerge_benchmark/input/Y1/in2.dat', '/home/yannick/imp/saxsmerge_benchmark/input/Y1/in3.dat']"
+ header (bool)= "False"
+ mergename (str)= "merged.dat"
+ npoints (int)= "200"
+ outlevel (str)= "full"
+ postpone_cleanup (bool)= "False"
+ remove_noisy (bool)= "True"
+ remove_redundant (bool)= "True"
+ stop (str)= "merging"
+ sumname (str)= "summary.txt"
+ verbose (int)= "0"

@@ -1,0 +1,20 @@
+set term png 
+set output "amelogenin_pH75_0_inputs_log_overlaid.png"
+set xrange [0:0.5782447]
+set log y
+p "runapp_amelogenin_pH75_0/data_5_pH75_lCaP_01f_01C_S014_0_01.sub" u 1:($4==1?$2:1/0):3 w yerr t "5_pH75_lCaP_01f_01C_S014_0_01.sub", \
+   "runapp_amelogenin_pH75_0/mean_5_pH75_lCaP_01f_01C_S014_0_01.sub" u 1:2 w l lt 2 not, \
+   "runapp_amelogenin_pH75_0/mean_5_pH75_lCaP_01f_01C_S014_0_01.sub" u 1:($2+$3) w l lt 2 not, \
+   "runapp_amelogenin_pH75_0/mean_5_pH75_lCaP_01f_01C_S014_0_01.sub" u 1:($2-$3) w l lt 2 not, \
+"runapp_amelogenin_pH75_0/data_5_pH75_lCaP_01f_01B_S012_0_01.sub" u 1:($4==1?$2:1/0):3 w yerr t "5_pH75_lCaP_01f_01B_S012_0_01.sub", \
+   "runapp_amelogenin_pH75_0/mean_5_pH75_lCaP_01f_01B_S012_0_01.sub" u 1:2 w l lt 3 not, \
+   "runapp_amelogenin_pH75_0/mean_5_pH75_lCaP_01f_01B_S012_0_01.sub" u 1:($2+$3) w l lt 3 not, \
+   "runapp_amelogenin_pH75_0/mean_5_pH75_lCaP_01f_01B_S012_0_01.sub" u 1:($2-$3) w l lt 3 not, \
+"runapp_amelogenin_pH75_0/data_5_pH75_lCaP_01f_01D_S016_0_01.sub" u 1:($4==1?$2:1/0):3 w yerr t "5_pH75_lCaP_01f_01D_S016_0_01.sub", \
+   "runapp_amelogenin_pH75_0/mean_5_pH75_lCaP_01f_01D_S016_0_01.sub" u 1:2 w l lt 4 not, \
+   "runapp_amelogenin_pH75_0/mean_5_pH75_lCaP_01f_01D_S016_0_01.sub" u 1:($2+$3) w l lt 4 not, \
+   "runapp_amelogenin_pH75_0/mean_5_pH75_lCaP_01f_01D_S016_0_01.sub" u 1:($2-$3) w l lt 4 not, \
+"runapp_amelogenin_pH75_0/data_5_pH75_lCaP_01f_01E_S018_0_01.sub" u 1:($4==1?$2:1/0):3 w yerr t "5_pH75_lCaP_01f_01E_S018_0_01.sub", \
+   "runapp_amelogenin_pH75_0/mean_5_pH75_lCaP_01f_01E_S018_0_01.sub" u 1:2 w l lt 5 not, \
+   "runapp_amelogenin_pH75_0/mean_5_pH75_lCaP_01f_01E_S018_0_01.sub" u 1:($2+$3) w l lt 5 not, \
+   "runapp_amelogenin_pH75_0/mean_5_pH75_lCaP_01f_01E_S018_0_01.sub" u 1:($2-$3) w l lt 5 not

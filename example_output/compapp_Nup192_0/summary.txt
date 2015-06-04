@@ -1,0 +1,100 @@
+#STATISTICAL MERGE: SUMMARY
+
+Ran with the following arguments:
+saxs_merge --destdir=compapp_Nup192_0 --blimit_fitting=240 --elimit_fitting=240 --blimit_hessian=80 --elimit_hessian=80 --berror --eerror --cmodel=normal --bmean=Full --stop=rescaling --postpone_cleanup --npoints=-1 --allfiles --outlevel=full runapp_Nup192_0/data_merged.dat /home/yannick/imp/saxsmerge_benchmark/input/Nup192/Nup192_merge.dat
+
+Merge step skipped
+
+Input file 0
+  General
+   Filename: runapp_Nup192_0/data_merged.dat
+   Number of points: 325 
+   Data range: 0.00962 0.32189 
+  2. GP parameters (values for non-rescaled curve)
+   mean function : Flat
+   A : 5.418037 +- 0.203208
+   sigma2 : 16.106331 +- 0.347765
+   tau : 9.733355 +- 0.524928
+   lambda : 0.047143 +- 443.293427
+   Calculated Values
+    Q1 : 0.000000
+    Q1.Rg : 0.000000
+    I(0) : nan
+   Hessian matrix : A sigma2 tau lambda
+    0.0412935949862 -0.00018014703528 0.00998697802424 0.146928191185
+    -0.00018014703528 0.12094052881 0.00469128182158 -14.2065267563
+    0.00998697802424 0.00469128182158 0.275549918413 -139.396194458
+    0.146928191185 -14.2065267563 -139.396194458 196509.0625 
+  3. Rescaling
+  normal model
+   gamma : 6.42658167613
+  Skipped further steps
+
+Input file 1
+  General
+   Filename: /home/yannick/imp/saxsmerge_benchmark/input/Nup192/Nup192_merge.dat
+   Number of points: 522 
+   Data range: 0.01241 0.49755 
+  2. GP parameters (values for non-rescaled curve)
+   mean function : Generalized
+   G : 177.264100 +- 1.136408
+   Rg : 37.882180 +- 11.380881
+   d : 3.146338 +- 22.467471
+   A : 0.435473 +- 13.094620
+   sigma2 : 15.308856 +- 0.335694
+   tau : 0.187196 +- 26.725561
+   lambda : 0.030584 +- 118.191243
+   Calculated Values
+    Q1 : 0.057347
+    Q1.Rg : 2.172442
+    I(0) : 177.711212
+   Hessian matrix : G Rg d A sigma2 tau lambda
+    1.29142391682 -11.2145671844 -2.08732318878 4.12324333191 0.0153800994158 5.05712747574 -19.5694465637
+    -11.2145671844 129.524459839 57.7206039429 -50.0894699097 -0.33011329174 -59.6237602234 323.943786621
+    -2.08732318878 57.7206039429 504.787261963 -160.389480591 0.0328094102442 267.923156738 687.867248535
+    4.12324333191 -50.0894699097 -160.389480591 171.469085693 0.186705991626 -27.7943515778 -203.322967529
+    0.0153800994158 -0.33011329174 0.0328094102442 0.186705991626 0.112690612674 0.630655765533 -3.22778868675
+    5.05712747574 -59.6237602234 267.923156738 -27.7943515778 0.630655765533 714.255615234 -198.301635742
+    -19.5694465637 323.943786621 687.867248535 -203.322967529 -3.22778868675 -198.301635742 13969.1699219
+  3. Rescaling
+  normal model
+   gamma : 1.0
+  Skipped further steps
+
+List of all options used for the merge:
+ name (type) = "value"
+ Nreps (list)= "[10, 10]"
+ aalpha (float)= "0.05"
+ acutoff (float)= "0.1"
+ allfiles (bool)= "True"
+ auto (bool)= "False"
+ baverage (bool)= "False"
+ berror (bool)= "True"
+ blimit_fitting (int)= "240"
+ blimit_hessian (int)= "80"
+ bmean (str)= "Full"
+ bnocomp (bool)= "False"
+ cmodel (str)= "normal"
+ cnpoints (int)= "200"
+ creference (str)= "last"
+ dalpha (float)= "0.05"
+ destdir (str)= "compapp_Nup192_0"
+ eaverage (bool)= "False"
+ eerror (bool)= "True"
+ eextrapolate (int)= "0"
+ elimit_fitting (int)= "240"
+ elimit_hessian (int)= "80"
+ emean (str)= "Full"
+ enocomp (bool)= "False"
+ enoextrapolate (bool)= "False"
+ filenames (list)= "['runapp_Nup192_0/data_merged.dat', '/home/yannick/imp/saxsmerge_benchmark/input/Nup192/Nup192_merge.dat']"
+ header (bool)= "False"
+ mergename (str)= "merged.dat"
+ npoints (int)= "-1"
+ outlevel (str)= "full"
+ postpone_cleanup (bool)= "True"
+ remove_noisy (bool)= "False"
+ remove_redundant (bool)= "False"
+ stop (str)= "rescaling"
+ sumname (str)= "summary.txt"
+ verbose (int)= "0"

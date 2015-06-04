@@ -1,0 +1,227 @@
+#STATISTICAL MERGE: SUMMARY
+
+Ran with the following arguments:
+saxs_merge --aalpha=0.05 --auto --remove_redundant --remove_noisy --blimit_hessian=80 --elimit_hessian=80 --blimit_fitting=240 --elimit_fitting=240 /home/yannick/imp/saxsmerge_benchmark/input/Anhydrase/in1.dat /home/yannick/imp/saxsmerge_benchmark/input/Anhydrase/in2.dat /home/yannick/imp/saxsmerge_benchmark/input/Anhydrase/in3.dat /home/yannick/imp/saxsmerge_benchmark/input/Anhydrase/in4.dat --destdir=runapp_Anhydrase_0 --allfiles --outlevel=full --berror --eerror
+
+Merge file
+  General
+   Filename: merged.dat
+   Number of points: 642
+   Data range: 0.00603 0.35952
+   181 points from profile 0 (/home/yannick/imp/saxsmerge_benchmark/input/Anhydrase/in4.dat)
+   63 points from profile 1 (/home/yannick/imp/saxsmerge_benchmark/input/Anhydrase/in3.dat)
+   359 points from profile 2 (/home/yannick/imp/saxsmerge_benchmark/input/Anhydrase/in2.dat)
+   39 points from profile 3 (/home/yannick/imp/saxsmerge_benchmark/input/Anhydrase/in1.dat)
+  Gaussian Process parameters
+   mean function : Generalized
+   G : 105.269884 +- 0.943713
+   Rg : 18.671068 +- 4.825943
+   d : 5.385871 +- 1.618170
+   A : 0.225612 +- 2.133757
+   sigma2 : 225.393235 +- 0.022102
+   tau : 0.880397 +- 3.789564
+   lambda : 0.047081 +- 80.454389
+  Calculated Values
+   Q1 : 0.152231
+   Q1.Rg : 2.842324
+   I(0) : 105.322402
+  Model Comparison : num_params -log10(Bayes Factor) -log(Posterior) -log(Likelihood) BIC AIC
+   Simple : 6	35.062143	83.081976	80.793985	-122.800439	-149.587969
+   Flat : 4	45.200827	111.746334	105.573580	-185.288807	-203.147160
+   Full : 8	inf	125.036223	119.494769	-187.272832	-222.989538
+   *Generalized : 7	34.182937	81.793493	79.558904	-113.865690	-145.117809
+  Model Comparison : best model
+   Name : Generalized
+   Number of parameters : 7
+   -log(Posterior) : 81.793493
+   -log(Likelihood) : 79.558904
+  Hessian matrix : G Rg d A sigma2 tau lambda
+   0.890595138073 -1.40793418884 0.00099331967067 1.05745172501 0.00063039327506 0.869194149971 1.52336657047
+   -1.40793418884 23.2897262573 -1.43662261963 -4.94782781601 -0.000875204452313 2.86857509613 153.994979858
+   0.00099331967067 -1.43662261963 2.61847281456 -0.575066268444 0.000306315429043 0.152607604861 11.0427627563
+   1.05745172501 -4.94782781601 -0.575066268444 4.55291938782 0.00120216689538 0.279973864555 8.025431633 
+   0.00063039327506 -0.000875204452313 0.000306315429043 0.00120216689538 0.000488512392621 0.00388429570012 -0.297174066305
+   0.869194149971 2.86857509613 0.152607604861 0.279973864555 0.00388429570012 14.3607988358 -167.188247681
+   1.52336657047 153.994979858 11.0427627563 8.025431633  -0.297174066305 -167.188247681 6472.90869141
+
+Input file 0
+  General
+   Filename: /home/yannick/imp/saxsmerge_benchmark/input/Anhydrase/in4.dat
+   Number of points: 1000 
+   Data range: 0.00548 0.58589 
+  1. Cleanup
+   Number of significant points: 393 
+   Data range: 0.00603 0.22071 
+  2. GP parameters (values for non-rescaled curve)
+   mean function : Generalized
+   G : 106.716441 +- 1.551414
+   Rg : 18.709513 +- 8.903029
+   d : 5.416371 +- 0.886454
+   A : -0.536191 +- 3.440693
+   sigma2 : 222.205438 +- 0.027505
+   tau : 0.639279 +- 5.186842
+   lambda : 0.016032 +- 116.568260
+   Calculated Values
+    Q1 : 0.152348
+    Q1.Rg : 2.850361
+    I(0) : 105.754681
+   Hessian matrix : G Rg d A sigma2 tau lambda
+    2.40688633919 -8.58174800873 -0.02814412117 3.66113352776 -0.00206108996645 1.9369122982 31.4942245483
+    -8.58174800873 79.263923645 0.713782072067 -24.7726154327 -0.00167384406086 5.95515632629 160.350189209
+    -0.02814412117 0.713782072067 0.78580135107 -1.71627235413 -0.000758726440836 -1.29328179359 13.0859260559
+    3.66113352776 -24.7726154327 -1.71627235413 11.8383712769 -0.00124305498321 0.619720697403 -44.6952667236
+    -0.00206108996645 -0.00167384406086 -0.000758726440836 -0.00124305498321 0.000756531138904 0.0147771015763 -0.278148293495
+    1.9369122982 5.95515632629 -1.29328179359 0.619720697403 0.0147771015763 26.9033260345 -123.528839111
+    31.4942245483 160.350189209 13.0859260559 -44.6952667236 -0.278148293495 -123.528839111 13588.1591797
+  3. Rescaling
+  normal model
+   gamma : 1.0
+  4. Classification
+   Number of valid points: 181 
+   Data range: 0.01096 0.21633 
+
+Input file 1
+  General
+   Filename: /home/yannick/imp/saxsmerge_benchmark/input/Anhydrase/in3.dat
+   Number of points: 1025 
+   Data range: 0.00548 0.58535 
+  1. Cleanup
+   Number of significant points: 390 
+   Data range: 0.00603 0.21907 
+  2. GP parameters (values for non-rescaled curve)
+   mean function : Generalized
+   G : 143.765256 +- 0.715040
+   Rg : 18.460395 +- 4.886183
+   d : 4.703606 +- 2.266654
+   A : -1.621860 +- 1.362861
+   sigma2 : 195.158883 +- 0.028804
+   tau : 1.310371 +- 2.753860
+   lambda : 0.031846 +- 193.222548
+   Calculated Values
+    Q1 : 0.143887
+    Q1.Rg : 2.656202
+    I(0) : 104.860538
+   Hessian matrix : G Rg d A sigma2 tau lambda
+    0.511282444  -1.51871073246 -0.0169072728604 0.664969563484 -0.000714658584911 0.280643582344 14.164645195
+    -1.51871073246 23.8747844696 -1.87567090988 -4.59616184235 -0.00252142967656 0.520572960377 119.348968506
+    -0.0169072728604 -1.87567090988 5.13771820068 -0.642332673073 0.00112583232112 0.538478374481 -111.040000916
+    0.664969563484 -4.59616184235 -0.642332673073 1.85738897324 -0.000517109758221 0.342362344265 -4.71557426453
+    -0.000714658584911 -0.00252142967656 0.00112583232112 -0.000517109758221 0.000829654338304 0.0071731954813 -0.619618296623
+    0.280643582344 0.520572960377 0.538478374481 0.342362344265 0.0071731954813 7.58374595642 -342.6824646
+    14.164645195 119.348968506 -111.040000916 -4.71557426453 -0.619618296623 -342.6824646 37334.953125
+  3. Rescaling
+  normal model
+   gamma : 0.741404682071
+  4. Classification
+   Number of valid points: 63 
+   Data range: 0.01644 0.14791 
+
+Input file 2
+  General
+   Filename: /home/yannick/imp/saxsmerge_benchmark/input/Anhydrase/in2.dat
+   Number of points: 1022 
+   Data range: 0.00548 0.58589 
+  1. Cleanup
+   Number of significant points: 647 
+   Data range: 0.00603 0.35952 
+  2. GP parameters (values for non-rescaled curve)
+   mean function : Generalized
+   G : 167.446172 +- 0.598687
+   Rg : 18.709995 +- 4.849141
+   d : 7.999978 +- 0.225655
+   A : 0.591878 +- 1.339970
+   sigma2 : 257.358627 +- 0.020656
+   tau : 1.395712 +- 3.067601
+   lambda : 0.047744 +- 119.807076
+   Calculated Values
+    Q1 : 0.185147
+    Q1.Rg : 3.464097
+    I(0) : 105.694759
+   Hessian matrix : G Rg d A sigma2 tau lambda
+    0.358426630497 -0.850280225277 -0.000686901912559 0.419463098049 -3.24906832248e-05 0.239469468594 2.10607481003
+    -0.850280225277 23.5141677856 -0.0292389895767 -3.07511711121 -0.00385953206569 3.32010102272 197.138015747
+    -0.000686901912559 -0.0292389895767 0.0509199723601 -0.0469672232866 0.000598711660132 -0.168806433678 3.48340010643
+    0.419463098049 -3.07511711121 -0.0469672232866 1.79552042484 0.000321961706504 -0.130802258849 2.24852395058
+    -3.24906832248e-05 -0.00385953206569 0.000598711660132 0.000321961706504 0.000426675047493 0.00317610637285 -0.242296218872
+    0.239469468594 3.32010102272 -0.168806433678 -0.130802258849 0.00317610637285 9.41017627716 -184.803237915
+    2.10607481003 197.138015747 3.48340010643 2.24852395058 -0.242296218872 -184.803237915 14353.7353516
+  3. Rescaling
+  normal model
+   gamma : 0.630093426332
+  4. Classification
+   Number of valid points: 359 
+   Data range: 0.00603 0.35952 
+
+Input file 3
+  General
+   Filename: /home/yannick/imp/saxsmerge_benchmark/input/Anhydrase/in1.dat
+   Number of points: 1010 
+   Data range: 0.00548 0.58589 
+  1. Cleanup
+   Number of significant points: 575 
+   Data range: 0.00603 0.32021 
+  2. GP parameters (values for non-rescaled curve)
+   mean function : Generalized
+   G : 181.172587 +- 0.638378
+   Rg : 18.840456 +- 5.448184
+   d : 7.999849 +- 0.496463
+   A : 0.796027 +- 1.399106
+   sigma2 : 217.422226 +- 0.024958
+   tau : 1.338277 +- 3.236772
+   lambda : 0.042413 +- 150.930499
+   Calculated Values
+    Q1 : 0.183863
+    Q1.Rg : 3.464069
+    I(0) : 106.121293
+   Hessian matrix : G Rg d A sigma2 tau lambda
+    0.407526552677 -1.18949568272 -0.000509852892719 0.493599742651 -0.000103284219222 0.272944718599 6.9826374054
+    -1.18949568272 29.6827068329 -0.216756209731 -4.03166389465 -0.00255861296318 0.824050307274 212.912841797
+    -0.000509852892719 -0.216756209731 0.246475204825 -0.0612445324659 0.00055684405379 -0.178580313921 1.55406057835
+    0.493599742651 -4.03166389465 -0.0612445324659 1.95749640465 -6.95861017448e-05 0.0707226097584 9.64768123627
+    -0.000103284219222 -0.00255861296318 0.00055684405379 -6.95861017448e-05 0.000622889434453 0.00207287841477 -0.11576295644
+    0.272944718599 0.824050307274 -0.178580313921 0.0707226097584 0.00207287841477 10.4766931534 -258.214660645
+    6.9826374054 212.912841797 1.55406057835 9.64768123627 -0.11576295644 -258.214660645 22780.015625
+  3. Rescaling
+  normal model
+   gamma : 0.584493729042
+  4. Classification
+   Number of valid points: 39 
+   Data range: 0.03616 0.18514 
+
+List of all options used for the merge:
+ name (type) = "value"
+ Nreps (list)= "[10, 10, 10, 10]"
+ aalpha (float)= "0.05"
+ acutoff (float)= "0.1"
+ allfiles (bool)= "True"
+ auto (bool)= "True"
+ baverage (bool)= "False"
+ berror (bool)= "True"
+ blimit_fitting (int)= "240"
+ blimit_hessian (int)= "80"
+ bmean (str)= "Full"
+ bnocomp (bool)= "False"
+ cmodel (str)= "normal"
+ cnpoints (int)= "200"
+ creference (str)= "last"
+ dalpha (float)= "0.05"
+ destdir (str)= "runapp_Anhydrase_0"
+ eaverage (bool)= "False"
+ eerror (bool)= "True"
+ eextrapolate (int)= "0"
+ elimit_fitting (int)= "240"
+ elimit_hessian (int)= "80"
+ emean (str)= "Full"
+ enocomp (bool)= "False"
+ enoextrapolate (bool)= "False"
+ filenames (list)= "['/home/yannick/imp/saxsmerge_benchmark/input/Anhydrase/in1.dat', '/home/yannick/imp/saxsmerge_benchmark/input/Anhydrase/in2.dat', '/home/yannick/imp/saxsmerge_benchmark/input/Anhydrase/in3.dat', '/home/yannick/imp/saxsmerge_benchmark/input/Anhydrase/in4.dat']"
+ header (bool)= "False"
+ mergename (str)= "merged.dat"
+ npoints (int)= "200"
+ outlevel (str)= "full"
+ postpone_cleanup (bool)= "False"
+ remove_noisy (bool)= "True"
+ remove_redundant (bool)= "True"
+ stop (str)= "merging"
+ sumname (str)= "summary.txt"
+ verbose (int)= "0"
