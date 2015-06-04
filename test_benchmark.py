@@ -88,7 +88,7 @@ class SAXSApplicationTest(IMP.test.ApplicationTestCase):
     def plot_data_overlaid(self, name, d1, d2, datarange, chi, title=None):
         # data overlaid in log scale
         fl = open('Cpgnuplot' + name, 'w')
-        fl.write('set term png font "Lenka"\n')
+        fl.write('set term png \n')
         fl.write('set output "%s_data_log_overlaid.png"\n' % name)
         fl.write('set log y\n')
         fl.write('set xrange [%s:%s]\n' % (datarange[0], datarange[1]))
@@ -104,7 +104,7 @@ class SAXSApplicationTest(IMP.test.ApplicationTestCase):
         os.system('GDFONTPATH="input/" gnuplot Cpgnuplot' + name)
         # data overlaid in linear scale
         fl = open('Cpgnuplot' + name, 'w')
-        fl.write('set term png font "Lenka"\n')
+        fl.write('set term png \n')
         fl.write('set output "%s_data_lin_overlaid.png"\n' % name)
         fl.write('set xrange [%s:%s]\n' % (datarange[0], datarange[1]))
         fl.write('set yrange [0:%s]\n' % datarange[3])
@@ -121,7 +121,7 @@ class SAXSApplicationTest(IMP.test.ApplicationTestCase):
     def plot_data_colored(self, name, d1, datarange, transform=(1, 0)):
         # data in linear scale, colored
         fl = open('Cpgnuplot' + name, 'w')
-        fl.write('set term png font "Lenka"\n')
+        fl.write('set term png \n')
         fl.write('set xrange [%s:%s]\n' % (datarange[0], datarange[1]))
         fl.write('set yrange [0:%s]\n' % datarange[3])
         fl.write('set output "%s_data_lin_colored.png"\n' % name)
@@ -131,7 +131,7 @@ class SAXSApplicationTest(IMP.test.ApplicationTestCase):
         os.system('GDFONTPATH="input/" gnuplot Cpgnuplot' + name)
         # data shifted in log scale
         fl = open('Cpgnuplot' + name, 'w')
-        fl.write('set term png font "Lenka"\n')
+        fl.write('set term png \n')
         fl.write('set output "%s_data_log_colored.png"\n' % name)
         fl.write('set log y\n')
         fl.write('set xrange [%s:%s]\n' % (datarange[0], datarange[1]))
@@ -144,7 +144,7 @@ class SAXSApplicationTest(IMP.test.ApplicationTestCase):
     def plot_means(self, name, d1, d2, datarange, chi):
         # linear scale
         fl = open('Cpgnuplot' + name, 'w')
-        fl.write('set term png font "Lenka"\n')
+        fl.write('set term png \n')
         fl.write('set output "%s_means_lin.png"\n' % name)
         fl.write('set xrange [%s:%s]\n' % (datarange[0], datarange[1]))
         fl.write('set yrange [0:%s]\n' % datarange[3])
@@ -158,7 +158,7 @@ class SAXSApplicationTest(IMP.test.ApplicationTestCase):
         os.system('GDFONTPATH="input/" gnuplot Cpgnuplot' + name)
         # log scale
         fl = open('Cpgnuplot' + name, 'w')
-        fl.write('set term png font "Lenka"\n')
+        fl.write('set term png \n')
         fl.write('set output "%s_means_log.png"\n' % name)
         fl.write('set log y\n')
         fl.write('set title "chi=%s"\n' % (chi))
@@ -175,7 +175,7 @@ class SAXSApplicationTest(IMP.test.ApplicationTestCase):
     def plot_data_mean(self, name, adata, amean, mdata, mmean, datarange):
         # linear scale
         fl = open('Cpgnuplot' + name, 'w')
-        fl.write('set term png font "Lenka"\n')
+        fl.write('set term png \n')
         fl.write('set output "%s_data_lin_mean.png"\n' % name)
         fl.write('set xrange [%s:%s]\n' % (datarange[0], datarange[1]))
         fl.write('set yrange [0:%s]\n' % (datarange[3] + 30))
@@ -192,7 +192,7 @@ class SAXSApplicationTest(IMP.test.ApplicationTestCase):
         os.system('GDFONTPATH="input/" gnuplot Cpgnuplot' + name)
         # log scale
         fl = open('Cpgnuplot' + name, 'w')
-        fl.write('set term png font "Lenka"\n')
+        fl.write('set term png \n')
         fl.write('set output "%s_data_log_mean.png"\n' % name)
         fl.write('set log y\n')
         fl.write('set xrange [%s:%s]\n' % (datarange[0], datarange[1]))
@@ -224,7 +224,7 @@ class SAXSApplicationTest(IMP.test.ApplicationTestCase):
         fox = os.path.join(destdir, foxs)
         # linear scale
         fl = open('Cpgnuplot' + name, 'w')
-        fl.write('set term png font "Lenka"\n')
+        fl.write('set term png \n')
         fl.write('set output "%s_pdb_lin.png"\n' % name)
         fl.write('set xrange [%s:%s]\n' % (datarange[0], datarange[1]))
         fl.write('set yrange [0:%s]\n' % datarange[3])
@@ -238,7 +238,7 @@ class SAXSApplicationTest(IMP.test.ApplicationTestCase):
         os.system('GDFONTPATH="input/" gnuplot Cpgnuplot' + name)
         # log scale
         fl = open('Cpgnuplot' + name, 'w')
-        fl.write('set term png font "Lenka"\n')
+        fl.write('set term png \n')
         fl.write('set output "%s_pdb_log.png"\n' % name)
         fl.write('set log y\n')
         fl.write('set xrange [%s:%s]\n' % (datarange[0], datarange[1]))
@@ -254,7 +254,7 @@ class SAXSApplicationTest(IMP.test.ApplicationTestCase):
 
     def plot_guinier(self, name, data, mean, Rg, qRgmax=1.3):
         fl = open('Cpgnuplot' + name, 'w')
-        fl.write('set term png font "Lenka"\n')
+        fl.write('set term png \n')
         fl.write('set output "%s_guinier.png"\n' % name)
         fl.write('set xrange [0:%s]\n' % (qRgmax / Rg))
         fl.write('p "%s" u ($1*$1):(log($2)):($3/$2) w yerr t "data", '
@@ -267,7 +267,7 @@ class SAXSApplicationTest(IMP.test.ApplicationTestCase):
     def plot_inputs(self, name, inpnames, inputs, minputs):
         # linear scale
         fl = open('Cpgnuplot' + name, 'w')
-        fl.write('set term png font "Lenka"\n')
+        fl.write('set term png \n')
         fl.write('set output "%s_inputs_lin.png"\n' % name)
         # get xmax
         maximums = [[i.split() for i in open(inp).readlines()]
@@ -298,7 +298,7 @@ class SAXSApplicationTest(IMP.test.ApplicationTestCase):
         os.system('GDFONTPATH="input/" gnuplot Cpgnuplot' + name)
         # log scale
         fl = open('Cpgnuplot' + name, 'w')
-        fl.write('set term png font "Lenka"\n')
+        fl.write('set term png \n')
         fl.write('set output "%s_inputs_log.png"\n' % name)
         fl.write('set xrange [0:%s]\n' % xmax)
         fl.write('set log y\n')
@@ -326,7 +326,7 @@ class SAXSApplicationTest(IMP.test.ApplicationTestCase):
     def plot_inputs_overlaid(self, name, inpnames, inputs, minputs):
         # linear scale
         fl = open('Cpgnuplot' + name, 'w')
-        fl.write('set term png font "Lenka"\n')
+        fl.write('set term png \n')
         fl.write('set output "%s_inputs_lin_overlaid.png"\n' % name)
         # get xmax
         maximums = [[i.split() for i in open(inp).readlines()]
@@ -353,7 +353,7 @@ class SAXSApplicationTest(IMP.test.ApplicationTestCase):
         os.system('GDFONTPATH="input/" gnuplot Cpgnuplot' + name)
         # log scale
         fl = open('Cpgnuplot' + name, 'w')
-        fl.write('set term png font "Lenka"\n')
+        fl.write('set term png \n')
         fl.write('set output "%s_inputs_log_overlaid.png"\n' % name)
         fl.write('set xrange [0:%s]\n' % xmax)
         fl.write('set log y\n')
