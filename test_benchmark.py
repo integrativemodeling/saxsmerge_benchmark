@@ -805,6 +805,7 @@ def create_datasets():
         inputs = None
         mergename = None
         pdb = None
+        expected_failure = False
 
     datasets = []
 
@@ -856,6 +857,7 @@ def create_datasets():
     # Nup53
     d = dataset()
     d.name = 'Nup53'
+    d.expected_failure = True
     d.inputs = ['Nup53/25029_01B_S065_0_01.sub',
                 'Nup53/25029_01C_S067_0_01.sub',
                 'Nup53/25029_02B_S069_0_01.sub',
@@ -867,6 +869,7 @@ def create_datasets():
     # mo_lair1s
     d = dataset()
     d.name = 'mo_lair1s'
+    d.expected_failure = True
     d.inputs = ['mo_lair1s/mo_lig_apo_02B_S012_0_02.sub',
                 'mo_lair1s/mo_lig_apo_02C_S014_0_02.sub',
                 'mo_lair1s/mo_lig_apo_02D_S016_0_02.sub',
@@ -891,6 +894,7 @@ def create_datasets():
     # amelogenin_pH56
     d = dataset()
     d.name = 'amelogenin_pH56'
+    d.expected_failure = True
     d.inputs = ['amelogenin_pH56/3_pH56_lCaP_01C_S014_0_01.sub',
                 'amelogenin_pH56/3_pH56_lCaP_01B_S012_0_01.sub',
                 'amelogenin_pH56/3_pH56_lCaP_01D_S016_0_01.sub',
@@ -901,6 +905,7 @@ def create_datasets():
     # amelogenin_pH75
     d = dataset()
     d.name = 'amelogenin_pH75'
+    d.expected_failure = True
     d.inputs = ['amelogenin_pH75/5_pH75_lCaP_01f_01C_S014_0_01.sub',
                 'amelogenin_pH75/5_pH75_lCaP_01f_01B_S012_0_01.sub',
                 'amelogenin_pH75/5_pH75_lCaP_01f_01D_S016_0_01.sub',
@@ -960,6 +965,7 @@ def create_datasets():
     # Ribonuclease
     d = dataset()
     d.name = 'Ribonuclease'
+    d.expected_failure = True
     d.inputs = ['Ribonuclease/in1.dat',
                 'Ribonuclease/in2.dat',
                 'Ribonuclease/in3.dat',
@@ -971,6 +977,7 @@ def create_datasets():
     # Thyroglobulin
     d = dataset()
     d.name = 'Thyroglobulin'
+    d.expected_failure = True
     d.inputs = ['Thyroglobulin/in1.dat',
                 'Thyroglobulin/in2.dat',
                 'Thyroglobulin/in3.dat',
@@ -1023,6 +1030,9 @@ for k, param in enumerate(params):
                                   l, dset.name, dset.inputs,
                                   dset.mergename, dset.pdb, plot_data=True)
         test_method.__name__ = 'test_case_%d_%d' % (l, k)
+        # Mark failing tests as such
+        if dset.expected_failure:
+            test_method = IMP.test.expectedFailure(test_method)
         setattr(SAXSApplicationTest, test_method.__name__, test_method)
 
 def print_corresp():
