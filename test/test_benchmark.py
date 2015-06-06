@@ -16,6 +16,9 @@ except:
     numpy = None
     scipy = None
 
+TOPDIR = os.path.abspath(os.path.join(os.path.dirname(sys.argv[0]), '..'))
+os.chdir(TOPDIR)
+
 """
 TODO: Add More
 - Nup2 (3N7C) : 25014

@@ -2,7 +2,8 @@ This is a benchmark for IMP's SAXS Merge method and webserver.
 
 ## Running the benchmark:
 
-Just run `test_benchmark.py`. You need gnuplot. The benchmark will run saxs
+Just run `test/test_benchmark.py`. You need gnuplot if you want to make plots.
+The benchmark will run saxs
 merge on all test systems in the `input/` folder.  All inputs contain an
 experimental SAXS profile. Some of them contain a PDB structure, whose SAXS
 profile is computed using FoXS and crysol. Comparisons are then also made using
