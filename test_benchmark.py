@@ -796,6 +796,8 @@ def create_test(paramnum, paramname, params, inputnum, inputname, inputs,
         with open('bench_%d_%d.dat' % (inputnum, paramnum), 'w') as fl:
             fl.write(data)
             fl.write('\n')
+        chi2 = ret[1]
+        self.assertLess(chi2, 0.35)
     return testcase
 
 
