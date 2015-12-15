@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+from __future__ import print_function
 import IMP.test
 import IMP.atom
 import IMP.saxs
@@ -66,8 +67,8 @@ class SAXSApplicationTest(IMP.test.ApplicationTestCase):
         args.append('--outlevel=full')
         args.extend([  # '--blimit_hessian=80', '--elimit_hessian=80',
             '--berror', '--eerror'])
-        print "### run_app"
-        print ' '.join(args)
+        print("### run_app")
+        print(' '.join(args))
         # sys.exit()
         p = self.run_python_application(self.appbin, args)
         out, err = p.communicate()
@@ -441,8 +442,8 @@ class SAXSApplicationTest(IMP.test.ApplicationTestCase):
             # downweight and add them
             chi.append(sum(contribs) / float(len(contribs)))
         if len(chi) < 50:
-            print "warning: chisquare computed on only %d points!" % len(chi)
-        # print "chisquare",fla,flb,sum(chi)/len(chi)
+            print("warning: chisquare computed on only %d points!" % len(chi))
+        # print("chisquare",fla,flb,sum(chi)/len(chi))
         return sum(chi) / len(chi)
 
     def get_transform(self, fname):
@@ -544,7 +545,7 @@ class SAXSApplicationTest(IMP.test.ApplicationTestCase):
         # fit the data
         exp_profile = IMP.saxs.Profile(tmpnam)
         os.unlink(tmpnam)
-        print exp_profile.size(), model_profile.size()
+        print(exp_profile.size(), model_profile.size())
         saxs_score = IMP.saxs.ProfileFitterChi(exp_profile)
         # passing default params, want to write log
         fitfile = os.path.join(destdir, 'foxs.dat')
@@ -678,8 +679,8 @@ class SAXSApplicationTest(IMP.test.ApplicationTestCase):
                     'runapp_' + name + '/data_merged.dat', manual_merge]
             if extra_args:
                 args.append(extra_args)
-            print "### run_results"
-            print ' '.join(args)
+            print("### run_results")
+            print(' '.join(args))
             # sys.exit()
             p = self.run_python_application(self.appbin, args)
             out, err = p.communicate()
@@ -698,7 +699,7 @@ class SAXSApplicationTest(IMP.test.ApplicationTestCase):
         # compute chi2 of data
         datachi = self.chisquare(automergedata, manmergedata,
                                  lognormal=False, qmax=None, factor=(autos, manuals))
-        print datachi
+        print(datachi)
         # compute chi2 of fits
         fitchi = self.chisquare(automergemean, manmergemean,
                                 lognormal=False, qmax=None)
@@ -722,7 +723,7 @@ class SAXSApplicationTest(IMP.test.ApplicationTestCase):
             crychi = None
             cryRg = None
         # radius of gyration
-        print automergemean
+        print(automergemean)
         guinierRg = self.get_guinier_Rg(automergemean)
         try:
             mguinierRg = self.get_guinier_Rg(manmergemean)
@@ -785,7 +786,7 @@ def create_test(paramnum, paramname, params, inputnum, inputname, inputs,
     outname = inputname + '_' + paramname
 
     def testcase(self):
-        print "Test case %d %d %s" % (inputnum, paramnum, outname)
+        print("Test case %d %d %s" % (inputnum, paramnum, outname))
         inp = map(self.get_input_file_name, inputs)
         merge = self.get_input_file_name(mergename)
         if pdb:
@@ -1041,13 +1042,13 @@ for k, param in enumerate(params):
         setattr(SAXSApplicationTest, test_method.__name__, test_method)
 
 def print_corresp():
-    print "Datasets"
+    print("Datasets")
     for k, p in enumerate(datasets):
-        print "%s : %s" % (k, p.name)
-    print
-    print "Params"
+        print("%s : %s" % (k, p.name))
+    print()
+    print("Params")
     for k, p in enumerate(params):
-        print "%s : %s" % (k, ' '.join(p))
+        print("%s : %s" % (k, ' '.join(p)))
 
 
 def print_params():
@@ -1066,7 +1067,7 @@ def print_params():
                     matchlen = len(it)
             if matchlen == -1:
                 raise ValueError
-        print " ".join(["%d" % i for i in ind])
+        print(" ".join(["%d" % i for i in ind]))
 
 
 if __name__ == '__main__':
