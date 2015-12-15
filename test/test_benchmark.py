@@ -787,7 +787,7 @@ def create_test(paramnum, paramname, params, inputnum, inputname, inputs,
 
     def testcase(self):
         print("Test case %d %d %s" % (inputnum, paramnum, outname))
-        inp = map(self.get_input_file_name, inputs)
+        inp = [self.get_input_file_name(i) for i in inputs]
         merge = self.get_input_file_name(mergename)
         if pdb:
             pdbname = self.get_input_file_name(pdb)
