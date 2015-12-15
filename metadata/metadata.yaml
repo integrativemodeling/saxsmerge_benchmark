@@ -1,6 +1,7 @@
 title: SAXS Merge benchmark
 tags: [SAXS, benchmark]
 pmid: 24365937
+prereqs: [python/numpy, python/scipy]
 test:
     runtime: 24h
     build: release
