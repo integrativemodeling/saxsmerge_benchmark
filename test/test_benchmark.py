@@ -1,14 +1,15 @@
 #!/usr/bin/env python
 
 from __future__ import print_function
-import IMP.test
 import IMP.atom
+import IMP.test
 import IMP.saxs
 import os
 import sys
 import shutil
 import tempfile
 import itertools
+import subprocess
 try:
     import numpy
     import scipy
@@ -29,10 +30,13 @@ TODO: Add More
 """
 
 
-class SAXSApplicationTest(IMP.test.ApplicationTestCase):
+class SAXSApplicationTest(IMP.test.TestCase):
+
+    def get_input_file_name(self, fname):
+        return os.path.join('input', fname)
 
     def setUp(self):
-        IMP.test.ApplicationTestCase.setUp(self)
+        IMP.test.TestCase.setUp(self)
         if numpy is None or scipy is None:
             self.skipTest("could not import numpy or scipy")
         if self.which('crysol'):
@@ -70,10 +74,7 @@ class SAXSApplicationTest(IMP.test.ApplicationTestCase):
         print("### run_app")
         print(' '.join(args))
         # sys.exit()
-        p = self.run_python_application(self.appbin, args)
-        out, err = p.communicate()
-        sys.stderr.write(err)
-        self.assertApplicationExitedCleanly(p.returncode, err)
+        subprocess.check_call([self.appbin] + args)
         # do some preliminary tests
         for i in [destname + '/data_merged.dat', destname + '/mean_merged.dat',
                   destname + '/summary.txt']:
@@ -682,10 +683,7 @@ class SAXSApplicationTest(IMP.test.ApplicationTestCase):
             print("### run_results")
             print(' '.join(args))
             # sys.exit()
-            p = self.run_python_application(self.appbin, args)
-            out, err = p.communicate()
-            sys.stderr.write(err)
-            self.assertApplicationExitedCleanly(p.returncode, err)
+            subprocess.check_call([self.appbin] + args)
         # rescale data using q < .2 and set errors to 1
         manmergedata = destdir + '/data_' + os.path.basename(manual_merge)
         manmergemean = destdir + '/mean_' + os.path.basename(manual_merge)
