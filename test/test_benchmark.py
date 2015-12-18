@@ -79,7 +79,8 @@ class SAXSApplicationTest(IMP.test.TestCase):
         for i in [destname + '/data_merged.dat', destname + '/mean_merged.dat',
                   destname + '/summary.txt']:
             self.assertTrue(os.path.exists(i))
-        text = open(destname + '/summary.txt').read()
+        with open(destname + '/summary.txt') as fh:
+            text = open(destname + '/summary.txt').read()
         m = text.find('Classification')
         self.assertIsNotNone(m,
                              msg="Classification output not found in summary.txt")
@@ -503,16 +504,16 @@ class SAXSApplicationTest(IMP.test.TestCase):
         return self.get_guinier_fit(qs, Is, errs)[0]
 
     def get_GPI_sigma(self, summary):
-        lines = open(summary).readlines()
-        lines = [numpy.sqrt(float(i.split()[2]))
-                 for i in lines if " sigma2 : " in i]
+        with open(summary) as fh:
+            lines = [numpy.sqrt(float(i.split()[2]))
+                     for i in fh if " sigma2 : " in i]
         return lines
 
     def get_GPI_Rg(self, summary):
         # GPI
-        lines = open(summary).readlines()
-        lines = [float(i.split()[2]) for i in lines if " Rg " in i and not
-                 'matrix' in i]
+        with open(summary) as fh:
+            lines = [float(i.split()[2]) for i in fh if " Rg " in i and not
+                     'matrix' in i]
         return lines
 
     def get_foxs_data(self, destdir, pdb, automerge, manualmerge,
@@ -554,13 +555,12 @@ class SAXSApplicationTest(IMP.test.TestCase):
         fitparams = saxs_score.fit_profile(model_profile,
                                            0.95, 1.05, -2.0, 4.0, False, fitori)
         # write in correct order
-        fl = open(fitfile, 'w')
-        for i in open(fitori):
-            if i.startswith('#'):
-                continue
-            t = i.split()
-            fl.write("%s %s 0.\n" % (t[0], t[2]))
-        fl.close()
+        with open(fitfile, 'w') as fl:
+            for i in open(fitori):
+                if i.startswith('#'):
+                    continue
+                t = i.split()
+                fl.write("%s %s 0.\n" % (t[0], t[2]))
         chi = self.chisquare(automerge, fitfile, weighted=chi_wt,
                              qmax=chi_qmax, lognormal=chi_ln,
                              factor=(factor, 0))
@@ -587,13 +587,12 @@ class SAXSApplicationTest(IMP.test.TestCase):
         mfitparams = saxs_score.fit_profile(model_profile,
                                             0.95, 1.05, -2.0, 4.0, False, mfitori)
         # write in correct order
-        fl = open(mfitfile, 'w')
-        for i in open(mfitori):
-            if i.startswith('#'):
-                continue
-            t = i.split()
-            fl.write("%s %s 0.\n" % (t[0], t[2]))
-        fl.close()
+        with open(mfitfile, 'w') as fl:
+            for i in open(mfitori):
+                if i.startswith('#'):
+                    continue
+                t = i.split()
+                fl.write("%s %s 0.\n" % (t[0], t[2]))
         mchi = self.chisquare(automerge, mfitfile, weighted=chi_wt,
                               qmax=chi_qmax, lognormal=chi_ln,
                               factor=(factor, 0))
@@ -616,11 +615,10 @@ class SAXSApplicationTest(IMP.test.TestCase):
         if not os.path.isfile(fitfile):
             os.system('cd %s; crysol %s %s; cd -' % (destdir, pdb, automerge))
         # write in correct order
-        fl = open(fitfile, 'w')
-        for i in open(os.path.join(destdir, name + '00.fit')).readlines()[1:]:
-            t = i.split()
-            fl.write("%s %s 0.\n" % (float(t[0]), float(t[2])))
-        fl.close()
+        with open(fitfile, 'w') as fl:
+            for i in open(os.path.join(destdir, name + '00.fit')).readlines()[1:]:
+                t = i.split()
+                fl.write("%s %s 0.\n" % (float(t[0]), float(t[2])))
         chi = self.chisquare(os.path.join(destdir, automerge),
                              fitfile, weighted=chi_wt, qmax=chi_qmax, lognormal=chi_ln,
                              factor=(factor, 0))
@@ -641,25 +639,25 @@ class SAXSApplicationTest(IMP.test.TestCase):
             factor = 1
         gamma = numpy.mean([(i[1] / j[1])
                             for i, j in zip(a, m) if j[0] < factor * qmax])
-        fl = open('rescale.dat', 'w')
-        [fl.write("%s %s %s %s\n" % (i[0], i[1] / gamma, j[1], i[1] / j[1] / gamma))
-         for i, j in zip(a, m) if j[0] < factor * qmax]
+        with open('rescale.dat', 'w') as fl:
+            [fl.write("%s %s %s %s\n" % (i[0], i[1] / gamma, j[1], i[1] / j[1] / gamma))
+             for i, j in zip(a, m) if j[0] < factor * qmax]
         # write automatic merge data and mean
         destdir = os.path.split(adata)[0]
         dret = os.path.join(destdir, 'data_rescaled.dat')
         mret = os.path.join(destdir, 'mean_rescaled.dat')
-        fl = open(mret, 'w')
-        for dat in a:
-            fl.write("%s %s %s\n" % (dat[0], dat[1] / gamma, dat[2] / gamma))
-        fl.close()
-        fl = open(dret, 'w')
-        for line in open(adata):
-            tok = line.split()
-            if len(tok) < 3:
-                continue
-            dat = map(float, tok)
-            fl.write("%s %s %s\n" % (dat[0], dat[1] / gamma, dat[2] / gamma))
-        fl.close()
+        with open(mret, 'w') as fl:
+            for dat in a:
+                fl.write("%s %s %s\n"
+                         % (dat[0], dat[1] / gamma, dat[2] / gamma))
+        with open(dret, 'w') as fl:
+            for line in open(adata):
+                tok = line.split()
+                if len(tok) < 3:
+                    continue
+                dat = map(float, tok)
+                fl.write("%s %s %s\n"
+                         % (dat[0], dat[1] / gamma, dat[2] / gamma))
         return dret, mret
 
     def run_results(
