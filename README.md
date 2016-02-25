@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/20506/integrativemodeling/saxsmerge_benchmark.svg)](https://zenodo.org/badge/latestdoi/20506/integrativemodeling/saxsmerge_benchmark)
+[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.46479.svg)](http://dx.doi.org/10.5281/zenodo.46479)
 
 This is a benchmark for IMP's SAXS Merge method and webserver.
 
