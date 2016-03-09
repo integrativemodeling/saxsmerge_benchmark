@@ -927,6 +927,7 @@ def create_datasets():
     # Y2
     d = dataset()
     d.name = 'Y2'
+    d.expected_failure = True
     d.inputs = ['Y2/in1.dat',
                 'Y2/in2.dat',
                 'Y2/in3.dat']
@@ -936,6 +937,7 @@ def create_datasets():
     # Aldolase
     d = dataset()
     d.name = 'Aldolase'
+    d.expected_failure = True
     d.inputs = ['Aldolase/in1.dat',
                 'Aldolase/in2.dat',
                 'Aldolase/in3.dat',
