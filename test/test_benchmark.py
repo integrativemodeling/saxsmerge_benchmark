@@ -80,7 +80,7 @@ class SAXSApplicationTest(IMP.test.TestCase):
                   destname + '/summary.txt']:
             self.assertTrue(os.path.exists(i))
         with open(destname + '/summary.txt') as fh:
-            text = open(destname + '/summary.txt').read()
+            text = fh.read()
         m = text.find('Classification')
         self.assertIsNotNone(m,
                              msg="Classification output not found in summary.txt")
@@ -394,10 +394,12 @@ class SAXSApplicationTest(IMP.test.TestCase):
     def chisquare(self, fla, flb, weighted=True, qmax=None, lognormal=False,
                   factor=(1, 1)):
         # read first 3 columns
-        da = [[float(x) for x in i.split()[:3]]
-              for i in open(fla).readlines() if not i.startswith('#')]
-        db = [[float(x) for x in i.split()[:3]]
-              for i in open(flb).readlines() if not i.startswith('#')]
+        with open(fla) as fh:
+            da = [[float(x) for x in i.split()[:3]]
+                  for i in fh.readlines() if not i.startswith('#')]
+        with open(flb) as fh:
+            db = [[float(x) for x in i.split()[:3]]
+                  for i in fh.readlines() if not i.startswith('#')]
         # get common q values up to 1e-5 in precision
         qa = set(map(lambda a: int(a[0] * 10 ** 5), da))
         qb = set(map(lambda a: int(a[0] * 10 ** 5), db))
@@ -556,11 +558,12 @@ class SAXSApplicationTest(IMP.test.TestCase):
                                            0.95, 1.05, -2.0, 4.0, False, fitori)
         # write in correct order
         with open(fitfile, 'w') as fl:
-            for i in open(fitori):
-                if i.startswith('#'):
-                    continue
-                t = i.split()
-                fl.write("%s %s 0.\n" % (t[0], t[2]))
+            with open(fitori) as fitori_fh:
+                for i in fitori_fh:
+                    if i.startswith('#'):
+                        continue
+                    t = i.split()
+                    fl.write("%s %s 0.\n" % (t[0], t[2]))
         chi = self.chisquare(automerge, fitfile, weighted=chi_wt,
                              qmax=chi_qmax, lognormal=chi_ln,
                              factor=(factor, 0))
