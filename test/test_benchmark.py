@@ -494,11 +494,11 @@ class SAXSApplicationTest(IMP.test.TestCase):
 
     def get_guinier_Rg(self, profile, weighted=True):
         if weighted:
-            data = numpy.array([map(float, i.split()[:3])
+            data = numpy.array([list(map(float, i.split()[:3]))
                                for i in open(profile).readlines() if not i.startswith('#')])
             qs, Is, errs = data.transpose()
         else:
-            data = numpy.array([map(float, i.split()[:2])
+            data = numpy.array([list(map(float, i.split()[:2]))
                                for i in open(profile).readlines() if not i.startswith('#')])
             qs, Is = data.transpose()
             errs = numpy.ones(len(qs))
@@ -631,9 +631,9 @@ class SAXSApplicationTest(IMP.test.TestCase):
     def rescale_curves(self, adata, amean, mmean, qmax=0.2):
         # read amean and mmean up to .2 (or 2) and get gamma from it
         a = [i.split() for i in open(amean) if not i.startswith('#')]
-        a = [map(float, i[:3]) for i in a if len(i) >= 3]
+        a = [list(map(float, i[:3])) for i in a if len(i) >= 3]
         m = [i.split() for i in open(mmean) if not i.startswith('#')]
-        m = [map(float, i[:3]) for i in m if len(i) >= 3]
+        m = [list(map(float, i[:3])) for i in m if len(i) >= 3]
         if max([i[0] for i in m]) > 1:
             # units are nm
             factor = 10
@@ -658,7 +658,7 @@ class SAXSApplicationTest(IMP.test.TestCase):
                 tok = line.split()
                 if len(tok) < 3:
                     continue
-                dat = map(float, tok)
+                dat = list(map(float, tok))
                 fl.write("%s %s %s\n"
                          % (dat[0], dat[1] / gamma, dat[2] / gamma))
         return dret, mret
@@ -733,7 +733,7 @@ class SAXSApplicationTest(IMP.test.TestCase):
         # plot data
         if plot_data:
             # get proper bounds
-            points = map(lambda a: map(float, a.split()[:2]),
+            points = map(lambda a: list(map(float, a.split()[:2])),
                          open(manmergedata).readlines())
             xmin = 0
             xmax = max([i[0] for i in points if len(i) >= 2]) * 1.2
