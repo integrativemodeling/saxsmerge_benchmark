@@ -493,15 +493,18 @@ class SAXSApplicationTest(IMP.test.TestCase):
         return rg, izero
 
     def get_guinier_Rg(self, profile, weighted=True):
-        if weighted:
-            data = numpy.array([list(map(float, i.split()[:3]))
-                               for i in open(profile).readlines() if not i.startswith('#')])
-            qs, Is, errs = data.transpose()
-        else:
-            data = numpy.array([list(map(float, i.split()[:2]))
-                               for i in open(profile).readlines() if not i.startswith('#')])
-            qs, Is = data.transpose()
-            errs = numpy.ones(len(qs))
+        with open(profile) as fh:
+            if weighted:
+                data = numpy.array([list(map(float, i.split()[:3]))
+                                    for i in fh.readlines()
+                                    if not i.startswith('#')])
+                qs, Is, errs = data.transpose()
+            else:
+                data = numpy.array([list(map(float, i.split()[:2]))
+                                    for i in fh.readlines()
+                                    if not i.startswith('#')])
+                qs, Is = data.transpose()
+                errs = numpy.ones(len(qs))
         # guinier fit, weighted by errors
         return self.get_guinier_fit(qs, Is, errs)[0]
 
