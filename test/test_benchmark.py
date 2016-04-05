@@ -480,7 +480,7 @@ class SAXSApplicationTest(IMP.test.TestCase):
         # fit the whole range up to q_rg, take median values for robustness
         cut = 5  # drop first 5 points, and take at least 5 points to estimate
         vals = []
-        for i in xrange(cut + 5, len(qs)):
+        for i in range(cut + 5, len(qs)):
             rg, izero = self._get_guinier_fit_fixed(
                 qs[cut:i], Is[cut:i], errs[cut:i])
             if rg > 0:
