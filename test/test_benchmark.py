@@ -270,17 +270,23 @@ class SAXSApplicationTest(IMP.test.TestCase):
         fl.close()
         os.system('GDFONTPATH="input/" gnuplot Cpgnuplot' + name)
 
+    def get_xmax(self, inputs):
+        """Get maximum x range for a set of plot files"""
+        def read_data_file(inp):
+            with open(inp) as fh:
+                return [i.split() for i in fh.readlines()]
+
+        data = [read_data_file(inp) for inp in inputs]
+        data = [[a for a in inp if int(a[3]) == 1] for inp in data]
+        return 1.1 * max(max(float(a[0]) for a in inp) for inp in data)
+
     def plot_inputs(self, name, inpnames, inputs, minputs):
         # linear scale
         fl = open('Cpgnuplot' + name, 'w')
         fl.write('set term png \n')
         fl.write('set output "%s_inputs_lin.png"\n' % name)
         # get xmax
-        maximums = [[i.split() for i in open(inp).readlines()]
-                    for inp in inputs]
-        maximums = [filter(lambda a:int(a[3]) == 1, inp) for inp in maximums]
-        xmax = 1.1 * \
-            max([max(map(lambda a:float(a[0]), inp)) for inp in maximums])
+        xmax = self.get_xmax(inputs)
         fl.write('set xrange [0:%s]\n' % xmax)
         fl.write('p ')
         for i, (inam, idat, imean) in enumerate(zip(inpnames, inputs, minputs)):
@@ -335,11 +341,7 @@ class SAXSApplicationTest(IMP.test.TestCase):
         fl.write('set term png \n')
         fl.write('set output "%s_inputs_lin_overlaid.png"\n' % name)
         # get xmax
-        maximums = [[i.split() for i in open(inp).readlines()]
-                    for inp in inputs]
-        maximums = [filter(lambda a:int(a[3]) == 1, inp) for inp in maximums]
-        xmax = 1.1 * \
-            max([max(map(lambda a:float(a[0]), inp)) for inp in maximums])
+        xmax = self.get_xmax(inputs)
         fl.write('set xrange [0:%s]\n' % xmax)
         fl.write('p ')
         for i, (inam, idat, imean) in enumerate(zip(inpnames, inputs, minputs)):
