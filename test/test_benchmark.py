@@ -740,12 +740,12 @@ class SAXSApplicationTest(IMP.test.TestCase):
         if plot_data:
             # get proper bounds
             with open(manmergedata) as fh:
-                points = map(lambda a: list(map(float, a.split()[:2])),
-                             fh.readlines())
+                points = [[float(x) for x in a.split()[:2]]
+                          for a in fh.readlines()]
             xmin = 0
-            xmax = max([i[0] for i in points if len(i) >= 2]) * 1.2
-            ymin = min([abs(i[1]) for i in points if len(i) >= 2]) * 0.8
-            ymax = max([i[1] for i in points if len(i) >= 2]) * 1.2
+            xmax = max(i[0] for i in points if len(i) >= 2) * 1.2
+            ymin = min(abs(i[1]) for i in points if len(i) >= 2) * 0.8
+            ymax = max(i[1] for i in points if len(i) >= 2) * 1.2
             datarange = (xmin, xmax, ymin, ymax)
             # plot data
             self.plot_data_overlaid(name, automergedata,
