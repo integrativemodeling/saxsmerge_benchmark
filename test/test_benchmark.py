@@ -540,14 +540,15 @@ class SAXSApplicationTest(IMP.test.TestCase):
         # rewrite profile in 3 col format
         tmpfl, tmpnam = tempfile.mkstemp()
         tmpfl = os.fdopen(tmpfl, 'w')
-        for line in open(automerge):
-            if line.startswith('#'):
-                continue
-            tokens = line.split()
-            if len(tokens) < 3:
-                continue
-            tmpfl.write('\t'.join(tokens[:3]))
-            tmpfl.write('\n')
+        with open(automerge) as automerge_fh:
+            for line in automerge_fh:
+                if line.startswith('#'):
+                    continue
+                tokens = line.split()
+                if len(tokens) < 3:
+                    continue
+                tmpfl.write('\t'.join(tokens[:3]))
+                tmpfl.write('\n')
         tmpfl.close()
         # fit the data
         exp_profile = IMP.saxs.Profile(tmpnam)
@@ -575,14 +576,15 @@ class SAXSApplicationTest(IMP.test.TestCase):
         # rewrite profile in 3 col format
         tmpfl, tmpnam = tempfile.mkstemp()
         tmpfl = os.fdopen(tmpfl, 'w')
-        for line in open(manualmerge):
-            if line.startswith('#'):
-                continue
-            tokens = line.split()
-            if len(tokens) < 3:
-                continue
-            tmpfl.write('\t'.join(tokens[:3]))
-            tmpfl.write('\n')
+        with open(manualmerge) as manualmerge_fh:
+            for line in manualmerge_fh:
+                if line.startswith('#'):
+                    continue
+                tokens = line.split()
+                if len(tokens) < 3:
+                    continue
+                tmpfl.write('\t'.join(tokens[:3]))
+                tmpfl.write('\n')
         tmpfl.close()
         # fit manual merge
         exp_profile = IMP.saxs.Profile(tmpnam)
@@ -594,11 +596,12 @@ class SAXSApplicationTest(IMP.test.TestCase):
                                             0.95, 1.05, -2.0, 4.0, False, mfitori)
         # write in correct order
         with open(mfitfile, 'w') as fl:
-            for i in open(mfitori):
-                if i.startswith('#'):
-                    continue
-                t = i.split()
-                fl.write("%s %s 0.\n" % (t[0], t[2]))
+            with open(mfitori) as mfitori_fh:
+                for i in mfitori_fh:
+                    if i.startswith('#'):
+                        continue
+                    t = i.split()
+                    fl.write("%s %s 0.\n" % (t[0], t[2]))
         mchi = self.chisquare(automerge, mfitfile, weighted=chi_wt,
                               qmax=chi_qmax, lognormal=chi_ln,
                               factor=(factor, 0))
@@ -736,8 +739,9 @@ class SAXSApplicationTest(IMP.test.TestCase):
         # plot data
         if plot_data:
             # get proper bounds
-            points = map(lambda a: list(map(float, a.split()[:2])),
-                         open(manmergedata).readlines())
+            with open(manmergedata) as fh:
+                points = map(lambda a: list(map(float, a.split()[:2])),
+                             fh.readlines())
             xmin = 0
             xmax = max([i[0] for i in points if len(i) >= 2]) * 1.2
             ymin = min([abs(i[1]) for i in points if len(i) >= 2]) * 0.8
