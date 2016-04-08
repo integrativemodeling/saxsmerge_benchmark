@@ -763,9 +763,10 @@ class SAXSApplicationTest(IMP.test.TestCase):
             self.plot_guinier(name, automergedata,
                               automergemean, Rg)
             # plot all those curves that were kept after cleanup
-            inpnames = map(os.path.basename, inputs)
-            inpnames = filter(lambda a: os.path.isfile(os.path.join(
-                'runapp_' + name, 'data_' + a)), inpnames)
+            inpnames = [os.path.basename(x) for x in inputs]
+            inpnames = [a for a in inpnames
+                        if os.path.isfile(os.path.join('runapp_' + name,
+                                                       'data_' + a))]
             curves = ['runapp_' + name + '/data_' + i for i in inpnames]
             mcurves = ['runapp_' + name + '/mean_' + i for i in inpnames]
             self.plot_inputs(name, inpnames, curves, mcurves)
