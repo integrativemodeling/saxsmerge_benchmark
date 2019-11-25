@@ -931,6 +931,7 @@ def create_datasets():
     # Y1
     d = dataset()
     d.name = 'Y1'
+    d.expected_failure = True
     d.inputs = ['Y1/in1.dat',
                 'Y1/in2.dat',
                 'Y1/in3.dat']
