@@ -786,7 +786,7 @@ class SAXSApplicationTest(IMP.test.TestCase):
 
 
 def create_test(paramnum, paramname, params, inputnum, inputname, inputs,
-                mergename, pdb=None, plot_data=False):
+                mergename, pdb, expected_failure, plot_data=False):
     """params and inputs are lists of strings
        paramname and inputname are strings
        mergename is the path to manual merge file
@@ -811,6 +811,12 @@ def create_test(paramnum, paramname, params, inputnum, inputname, inputs,
             fl.write('\n')
         chi2 = ret[1]
         self.assertLess(chi2, 0.35)
+        # Some tests usually, but not always, fail. This wasn't an issue
+        # with Python 2, but in Python 3 a test marked as expectedFailure
+        # will be marked as failed if it succeeds. Work around this by
+        # *always* having expected-failure tests raise an exception.
+        if expected_failure:
+            raise ValueError("unexpected success")
     return testcase
 
 
@@ -1046,7 +1052,8 @@ for k, param in enumerate(params):
     for l, dset in enumerate(datasets):
         test_method = create_test(k, str(k), param,
                                   l, dset.name, dset.inputs,
-                                  dset.mergename, dset.pdb, plot_data=True)
+                                  dset.mergename, dset.pdb,
+                                  dset.expected_failure, plot_data=True)
         test_method.__name__ = 'test_case_%d_%d' % (l, k)
         # Mark failing tests as such
         if dset.expected_failure:
